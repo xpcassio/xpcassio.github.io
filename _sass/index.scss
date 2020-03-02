@@ -1,0 +1,44 @@
+.new-header {
+	hr {
+		border-width: 5px;
+		width: 100px;
+		float: left;
+		margin-top: 0;
+		margin-bottom: 15px;
+		border-color: lighten($new_preto, 25%);
+	}
+
+	h2,h3 {
+		float: left;
+		margin-top: 0;
+		margin-bottom: 20px;
+		width: 100%;
+		color: $new_preto;
+	}
+}
+
+.new-educacao {
+	font-size: .9rem;
+
+	h4 {
+		font-size: 1.3rem;
+		margin-top:0;
+		margin-bottom: 5px;
+	}
+}
+
+.div-competencia {
+	/*i {
+		float: left;
+		margin-right: 15px;
+	}*/
+
+	.progress {
+		border-radius: 10px;
+		margin-top: 5px;
+	}
+
+	.progress-bar-dark {
+		background-color: lighten($new_preto, 5%);
+	}
+}

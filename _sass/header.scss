@@ -1,0 +1,89 @@
+.jumbotron-one {
+	background-color: $new_preto;
+	color: white;
+	margin-bottom: 0;
+	padding: 3rem 2rem;
+
+	img {
+		width: 160px;
+		height: 160px;
+	}
+
+	.nome-geral {
+		font-family: 'Archivo Black', sans-serif;
+	}
+
+	.style-hr {
+		border-width: 5px;
+	    width: 200px;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+
+		svg {
+			fill: white;
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 38px;
+		}
+	}
+
+	.social-linkedin:focus,.social-linkedin:hover {
+		svg {
+			fill: $azul_linkdin;
+		}
+	}
+
+	.social-github:focus,.social-github:hover {
+		svg {
+			fill: $cinza_github;
+		}
+	}
+}
+
+.jumbotron-two {
+	background-color: lighten($new_preto, 5%);
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	nav.navbar {
+		.navbar-toggler {
+
+			svg {
+				fill: rgba(255,255,255,.5);
+				width: 25px;
+			}
+		}
+	}
+}
+
+/* ============================================= 
+   RESPONSIVENESS
+   ============================================= */
+@media (min-width: 768px) { // Small devices (landscape phones, 576px and up)
+
+.jumbotron {
+	img {
+		width: 200px;
+		height: 200px;
+	}
+
+	.nome-geral {
+		font-size: 50px;
+	}
+}
+
+}
+
+@media (min-device-width: 970px) { // Medium devices (tablets, 768px and up)
+
+.jumbotron {
+	.nome-geral {
+		font-size: 55px;
+	}
+}
+	
+}

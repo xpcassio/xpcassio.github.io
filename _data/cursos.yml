@@ -1,0 +1,8 @@
+- id: 1
+  nome: CS50's Introduction to Computer Science
+  onde: HarvardX • Edx
+  status: <span class="badge badge-secondary w-50">Andamento</span>
+- id: 2
+  nome: Montagem e manutenção de microcomputadores
+  onde: Senac/PA
+  status: <span class="badge badge-success w-50">Concluido</span>
