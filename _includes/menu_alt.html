@@ -1,0 +1,20 @@
+<div class="jumbotron jumbotron-two rounded-0 mb-5 border-top border-dark">
+	<div class="container">
+		<nav class="navbar navbar-expand-sm navbar-dark p-0">
+			<button class="navbar-toggler mx-auto border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- <span class="navbar-toggler-icon"></span> -->
+				{% include /svg/bars.svg %}
+			</button>
+
+			<div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					{% for item in site.data.navegacao %}
+						<li class="nav-item text-center">
+							<a class="nav-link {% if page.url == item.link %}active{% endif %} {% if item.id == 1 %}pl-0{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
