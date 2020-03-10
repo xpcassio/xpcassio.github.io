@@ -14,6 +14,17 @@
 						</li>
 					{% endfor %}
 				</ul>
+
+				{% if page.url == "/blog.html" %}
+					<form class="form-inline ml-auto my-2 my-lg-0">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" type="button" id="button-addon2">{% include /svg/search.svg %}</button>
+							</div>
+						</div>
+					</form>
+				{% endif %}
 			</div>
 		</nav>
 	</div>
