@@ -32,8 +32,13 @@
 <body>
 	{% include header_alt.html %}
 	{% include menu_alt.html %}
+	{% include header_blog.html %}
 	
-	{{ content }}
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-8 mx-lg-auto">{{ content }}</div>
+		</div>
+	</div>
 
 	{% include footer_alt.html %}
 
