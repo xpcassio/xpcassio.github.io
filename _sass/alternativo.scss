@@ -7,10 +7,14 @@
 }
 
 .hr-especial {
-	span {
-		top: 0;
+	hr {
+		margin-bottom: 40px;
+	}
+
+	h3 {
+		top: -1px;
 		position: absolute;
 		background: white;
-		padding: 5px 10px 5px 0;
+		padding: 0 10px 0 0;
 	}
 }
