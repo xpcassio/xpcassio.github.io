@@ -25,7 +25,9 @@
 						</div>
 					</form>
 				{% elsif page.url != "/projetos.html"  %}
-					<button type="button" class="btn btn-secondary ml-auto">{% include /svg/chevron-left.svg %}Voltar</button>
+					<div class="text-center text-md-right w-100">
+						<button type="button" class="btn btn-secondary mt-1 mt-md-0 ml-md-auto" onClick="window.history.back();">{% include /svg/chevron-left.svg %}Voltar</button>
+					</div>
 				{% endif %}
 			</div>
 		</nav>
