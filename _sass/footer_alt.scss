@@ -1,0 +1,18 @@
+.footer {
+	text-align: center;
+	background-color: lighten($new_preto, 5%);
+	color: white;
+
+	p {
+		margin: 0;
+
+		a {
+			text-decoration: none;
+
+			&:hover,&:focus { text-decoration: none; }
+
+			&:before { content: '<'; margin-right: 3px; }
+			&:after { content: '>'; margin-left: 3px; }
+		}
+	}
+}

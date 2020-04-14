@@ -33,7 +33,7 @@
 	{% include header_alt.html %}
 	{% include menu_alt.html %}
 	
-	<div class="container">
+	<div class="container mb-5">
 		<div class="row">
 			<div class="col-12 col-lg-8 mx-lg-auto div-blog">
 				<h1 class="blog-header mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, possimus!</h1>
@@ -44,7 +44,7 @@
 				<div class="media media-post">
 					<img src="/assets/images/xpcassio.png" alt="..." class="rounded-circle img-thumbnail mr-3">
 					<div class="media-body">
-						<h5 class="mt-2 mb-0">Cássio Nascimento</h5>
+						<h5 class="mt-2 mb-0">Por Cássio Nascimento</h5>
 						<span class="text-muted">
 							{% include /svg/calendar-day.svg %}
 							11/11/1111 00h00
@@ -56,10 +56,19 @@
 			</div>
 			
 			<div class="col-12 col-lg-8 mx-lg-auto">
+				{{ content }}
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p> -->
+			</div>
+
+			<div class="col-12 col-lg-8 mx-lg-auto mt-5">
+				<div class="hr-especial">
+					<hr>
+					<h3 class="mb-0">Saiba mais</h3>
+				</div>
+				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores blanditiis quas veniam, suscipit magnam fuga explicabo doloremque. Quam labore temporibus ratione iure soluta error consectetur consequatur esse accusantium tempore.</p>
 			</div>
 			<!-- <div class="col-12 col-lg-8 mx-lg-auto">{{ content }}</div> -->
 		</div>
@@ -68,7 +77,7 @@
 	{% include footer_alt.html %}
 
 	<!-- JS -->
-	<script  type="text/javascript" src="/assets/js/jquery-3.4.1.slim.min.js"></script>
-	<script  type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
