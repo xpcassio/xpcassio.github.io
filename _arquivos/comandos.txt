@@ -1,0 +1,25 @@
+cd /Applications/MAMP/htdocs/xpcassio.github.io
+- Abre a pasta do projeto
+
+bundle exec jekyll serve
+- Executa o servidor jekyll (e o bundle)
+
+http://127.0.0.1:4000/
+- Server
+
+-----------------------------------------------
+
+jekyll new PATH --blank
+- Inicia um projeto em branco
+
+bundle init
+- Inicia o bundle
+
+bundle add jekyll
+- Adiciona a ultima versão do jekyll
+
+-----------------------------------------------
+NO ARQUIVO GEMFILE
+
+# Fix para o problema com o ruby 3.0.0
+gem "webrick", "~> 1.7"
