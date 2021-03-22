@@ -1,8 +1,10 @@
 # xpcassio.com
 
+
 # Corrigir
 ## Projeto
 
+- [x] Atualizar plugins.
 - [ ] Reverificar SEO.
 
 ## /index.html

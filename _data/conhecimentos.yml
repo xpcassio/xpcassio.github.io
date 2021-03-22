@@ -4,7 +4,7 @@
   link: https://img.shields.io/badge/css-v3-1572B6?style=for-the-badge&logo=css3
 - name: Javascript
   link: https://img.shields.io/badge/Javascript-vanilla-F7DF1E?style=for-the-badge&logo=javascript
-- name: Bootstrap
+- name: BootstrapV4
   link: https://img.shields.io/badge/Bootstrap-v4.4.1-563D7C?style=for-the-badge&logo=bootstrap
 - name: Html5
   link: https://img.shields.io/badge/HTML-v5-E34F26?style=for-the-badge&logo=html5
@@ -24,3 +24,13 @@
   link: https://img.shields.io/badge/scriptcase-v.9-5381c6?style=for-the-badge
 - name: Jekyll
   link: https://img.shields.io/badge/jekyll-v.4-CC0000?style=for-the-badge&logo=jekyll
+- name: MongoDB
+  link: https://img.shields.io/badge/mongoDB--47A248?style=for-the-badge&logo=mongodb
+- name: BootstrapV5
+  link: https://img.shields.io/badge/Bootstrap-v5-7952B3?style=for-the-badge&logo=bootstrap
+- name: AngularJS
+  link: https://img.shields.io/badge/AngularJS-V1.8-E23237?style=for-the-badge&logo=angularjs
+- name: Material Design
+  link: https://img.shields.io/badge/material_design--757575?style=for-the-badge&logo=material-design
+- name: Node.js
+  link: https://img.shields.io/badge/Node.js--339933?style=for-the-badge
