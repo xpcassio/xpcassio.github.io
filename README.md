@@ -6,13 +6,14 @@
 
 - [x] Atualizar plugins.
 - [ ] Reverificar SEO.
+- [ ] Favicon de acordo com o modo do navegador (escuro/claro).
 
 ## /index.html
 
-- [ ] Atualizar texto sobre mim.
-- [ ] Adicionar SEFA nas experiências.
-- [ ] Modificar os textos das experiências existentes.
-- [ ] Adicionar novos logos ao conhecimentos.
+- [x] Atualizar texto sobre mim.
+- [x] Adicionar SEFA nas experiências.
+- [x] Modificar os textos das experiências existentes.
+- [x] Adicionar novos logos ao conhecimentos.
 - [ ] Mudar a foto.
 - [ ] Retirar o .html do menu.
 
