@@ -9,8 +9,25 @@
 			<div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarSupportedContent">
 				<ul class="navbar-nav">
 					{% for item in site.data.navegacao %}
+						{% if page.collection == %}
+							{% assign tmp_url = page.url %}
+						{% else %}
+							{% assign tmp_url = page.collection | prepend: "/" %}
+						{% endif %}
+						<script>
+							// console.log("{{ page.url }}");
+							// console.log("{{ page.title }}");
+							// console.log("{{ page.id }}");
+							// console.log("{{ page.categories }}");
+							// console.log("{{ page.collection }}");
+							// console.log("{{ page.tags }}");
+							console.log("{{ tmp_url }}");
+							console.log("{{ item.link }}");
+							console.log("-----><-----");
+						</script>
+
 						<li class="nav-item text-center">
-							<a class="nav-link {% if page.url == item.linkalt %}active{% endif %} {% if item.id == 1 %}pl-0{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+							<a class="nav-link {% if item.link == tmp_url %}active{% endif %} {% if item.id == 1 %}pl-0{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
 						</li>
 					{% endfor %}
 				</ul>

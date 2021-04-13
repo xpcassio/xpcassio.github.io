@@ -1,3 +1,8 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://xpcassio.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
+baseavatar: "/assets/images/xpcassio_alt.jpg" # /assets/images/xpcassio.png
+
+collections:
+  projetos:
+    output: true
