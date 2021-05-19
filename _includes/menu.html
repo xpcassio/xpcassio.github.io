@@ -1,8 +1,8 @@
-<div class="jumbotron jumbotron-two rounded-0 mb-5 border-top border-dark">
+<!-- <div class="jumbotron jumbotron-two rounded-0 mb-5 border-top border-dark">
 	<div class="container">
 		<nav class="navbar navbar-expand-sm navbar-dark p-0">
 			<button class="navbar-toggler mx-auto border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<!-- <span class="navbar-toggler-icon"></span> -->
+				<span class="navbar-toggler-icon"></span>
 				{% include /svg/bars.svg %}
 			</button>
 
@@ -14,6 +14,59 @@
 						</li>
 					{% endfor %}
 				</ul>
+			</div>
+		</nav>
+	</div>
+</div> -->
+
+<div class="jumbotron jumbotron-two rounded-0 mb-5 border-top border-dark">
+	<div class="container">
+		<nav class="navbar navbar-expand-sm navbar-dark p-0">
+			<button class="navbar-toggler mx-auto border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- <span class="navbar-toggler-icon"></span> -->
+				{% include /svg/bars.svg %}
+			</button>
+
+			<div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarSupportedContent">
+				<ul class='navbar-nav {% if page.url == "/" %}mx-auto{% endif %}'>
+					{% for item in site.data.navegacao %}
+						{% if page.collection == %}
+							{% assign tmp_url = page.url | remove: ".html" %}
+						{% else %}
+							{% assign tmp_url = page.collection | prepend: "/" | remove: ".html" %}
+						{% endif %}
+						<script>
+							console.log("{{ page.url }}");
+							// console.log("{{ page.title }}");
+							// console.log("{{ page.id }}");
+							console.log("{{ page.categories }}");
+							console.log("{{ page.collection }}");
+							// console.log("{{ page.tags }}");
+							console.log("{{ tmp_url }}");
+							console.log("{{ item.link }}");
+							console.log("-----><-----");
+						</script>
+
+						<li class="nav-item text-center">
+							<a class="nav-link {% if item.link == tmp_url %}active{% endif %} {% if item.id == 1 %}pl-0{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+				{% if page.url == "/posts.html" %}
+					<form class="form-inline ml-auto my-0 my-lg-0">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" type="button" id="button-addon2">{% include /svg/search.svg %}</button>
+							</div>
+						</div>
+					</form>
+				{% elsif page.collection == "projetos" or page.collection == "posts" %}
+					<div class="text-center text-md-right w-100">
+						<button type="button" class="btn btn-secondary mt-1 mt-md-0 ml-md-auto" onClick="window.history.back();">{% include /svg/chevron-left.svg %}Voltar</button>
+					</div>
+				{% endif %}
 			</div>
 		</nav>
 	</div>

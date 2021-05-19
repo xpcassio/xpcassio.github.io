@@ -6,7 +6,7 @@
    ============================================= */
 @import 'https://fonts.googleapis.com/css?family=Archivo+Black&display=swap';
 
-body p {
+body.body-alt p {
 	font-size: .9rem;
 }
 
@@ -19,12 +19,16 @@ $cinza_github: #24292e;
 
 /* ============================================= 
    PAGES 
-   ============================================= */
+   ============================================= */   
 @import 'index';
+@import 'alternativo';
+// @import 'post';
 
 /* ============================================= 
    LAYOUT 
    ============================================= */
-@import 'header';
 @import 'menu';
+@import 'header';
+@import 'header_alt';
 @import 'footer';
+@import 'footer_alt';

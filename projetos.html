@@ -47,39 +47,26 @@ title: xpcassio - projetos
 		<div class="col-12 mt-5">
 			<div class="hr-especial">
 				<hr>
-				<h3 class="mb-0">Pessoal</h3>
+				<h3 class="mb-0">Freelance</h3>
 			</div>
 			<div class="row">
+				{% for pessoais in site.data.projetos_own %}
 				<div class="col-12 col-md-6">
-					<div class="card mb-4" style="max-width: 540px;">
+					<a href="" class="card mb-4" style="max-width: 540px;">
 						<div class="row no-gutters">
 							<div class="col-lg-4">
-								<img src="https://via.placeholder.com/150" class="card-img rounded-0" alt="...">
+								<img src="{{pessoais.imagem}}" class="card-img rounded-0" alt="...">
 							</div>
 							<div class="col-lg-8">
 								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<h5 class="card-title">{{pessoais.nome}}</h5>
+									<p class="card-text">{{pessoais.texto}}</p>
 								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
-				<div class="col-12 col-md-6">
-					<div class="card" style="max-width: 540px;">
-						<div class="row no-gutters">
-							<div class="col-lg-4">
-								<img src="https://via.placeholder.com/150" class="card-img rounded-0" alt="...">
-							</div>
-							<div class="col-lg-8">
-								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

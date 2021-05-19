@@ -1,3 +1,16 @@
-- id: 1
-- id: 2
-- id: 3
+-
+  nome: Arbo
+  texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+  imagem: https://via.placeholder.com/150
+-
+  nome: Arbo (lite)
+  texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+  imagem: https://via.placeholder.com/150
+-
+  nome: Metaweb PRO
+  texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+  imagem: https://via.placeholder.com/150
+-
+  nome: SO Nerds
+  texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+  imagem: https://via.placeholder.com/150
