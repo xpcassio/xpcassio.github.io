@@ -8,7 +8,7 @@
 	<!-- SEO -->
 	{% include seo.html %}
 
-	<title>{{ page.title }}</title>
+	<title>xpassio - projeto - {{ page.title }}</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -18,44 +18,64 @@
 	{% include header_alt.html %}
 	{% include menu.html %}
 	
+	{% assign tmp_dados = site.data[page.tipo][page.projeto] %}
 	<div class="container mb-5">
 		<div class="row">
 			<div class="col-12 col-lg-8 mx-lg-auto div-blog">
-				<h1 class="blog-header mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, possimus!</h1>
-				<h5 class="blog-description mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex iusto, quis ipsa maxime sit alias tempore molestias. Fuga architecto ad porro consequuntur rem aliquid.</h5>
+				<h1 class="blog-header mb-4">{{ tmp_dados.nome }}</h1>
+				<h5 class="blog-description mb-4 text-muted text-left">{{ tmp_dados.texto }}</h5>
 			</div>
 
 			<div class="col-12 col-lg-8 mx-lg-auto">
-				<div class="media media-post">
-					<img src="{{ site.baseavatar }}" alt="..." class="rounded-circle img-thumbnail mr-3">
-					<div class="media-body">
-						<h5 class="mt-2 mb-0">Por Cássio Nascimento</h5>
-						<span class="text-muted">
-							{% include /svg/calendar-day.svg %}
-							11/11/1111 00h00
-						</span>
-					</div>
-				</div>
-
+				<span class="{% if tmp_dados.habilidades.responsivo == true %}svg-projetos-selected{% else %}svg-projetos-muted{% endif %}" data-toggle="tooltip" data-placement="right" title="Responsivo">{% include /svg/iconmonstr-smartphone-16.svg %}</span>
+				<span class="{% if tmp_dados.habilidades.front == true %}svg-projetos-selected{% else %}svg-projetos-muted{% endif %}" data-toggle="tooltip" data-placement="right" title="Front-end">{% include /svg/iconmonstr-window-5.svg %}</span>
+				<span class="{% if tmp_dados.habilidades.back == true %}svg-projetos-selected{% else %}svg-projetos-muted{% endif %}" data-toggle="tooltip" data-placement="right" title="Back-end">{% include /svg/iconmonstr-window-10.svg %}</span>
+				<span class="{% if tmp_dados.habilidades.banco == true %}svg-projetos-selected{% else %}svg-projetos-muted{% endif %}" data-toggle="tooltip" data-placement="right" title="Banco de dados">{% include /svg/iconmonstr-database-1.svg %}</span>
 				<hr class="mt-4 mb-5" />
 			</div>
 			
 			<div class="col-12 col-lg-8 mx-lg-auto">
-				{{ content }}
-				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p> -->
+			{% if tmp_dados.desktop != false %}
+				<h3 class="mb-3">Desktop</h3>
+				<div class="card-columns">
+				{% for item in tmp_dados.desktop %}
+					<div class="card">
+						<img src="/assets/images/projetos/{{ page.projeto }}/{{ item.imagem }}" class="card-img-top" alt="...">
+					</div>
+				{% endfor %}
+				</div>
+			{% endif %}
+
+			{% if tmp_dados.tablet != false %}
+				<h3 class="mt-4 mb-3">Tablet</h3>
+				<div class="card-columns">
+				{% for item in tmp_dados.tablet %}
+					<div class="card">
+						<img src="/assets/images/projetos/{{ page.projeto }}/{{ item.imagem }}" class="card-img-top" alt="...">
+					</div>
+				{% endfor %}
+				</div>
+			{% endif %}
+
+			{% if tmp_dados.mobile != false %}
+				<h3 class="mt-4 mb-3">Mobile</h3>
+				<div class="card-columns">
+				{% for item in tmp_dados.mobile %}
+					<div class="card">
+						<img src="/assets/images/projetos/{{ page.projeto }}/{{ item.imagem }}" class="card-img-top" alt="...">
+					</div>
+				{% endfor %}
+				</div>
+			{% endif %}
 			</div>
 
 			<div class="col-12 col-lg-8 mx-lg-auto mt-5">
 				<div class="hr-especial">
 					<hr>
-					<h3 class="mb-0">Saiba mais</h3>
+					<h3 class="mb-0">Outros projetos</h3>
 				</div>
 				<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores blanditiis quas veniam, suscipit magnam fuga explicabo doloremque. Quam labore temporibus ratione iure soluta error consectetur consequatur esse accusantium tempore.</p>
 			</div>
-			<!-- <div class="col-12 col-lg-8 mx-lg-auto">{{ content }}</div> -->
 		</div>
 	</div>
 
@@ -64,5 +84,10 @@
 	<!-- JS -->
 	<script type="text/javascript" src="/assets/js/jquery-3.5.1.slim.min.js"></script>
 	<script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
 </body>
 </html>

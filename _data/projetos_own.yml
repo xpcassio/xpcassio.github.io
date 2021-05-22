@@ -1,16 +1,78 @@
--
+arbo:
   nome: Arbo
   texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
   imagem: https://via.placeholder.com/150
--
+  habilidades:
+    responsivo: true
+    front: false
+    back: true
+    banco: false
+  desktop:
+    -
+      imagem: desktop_index_0.png
+    -
+      imagem: desktop_quemsomos_0.png
+    -
+      imagem: desktop_servico_0.png
+    -
+      imagem: desktop_tecnologia_0.png
+    -
+      imagem: desktop_contato_0.png
+  tablet:
+    -
+      imagem: tablet_index_0.png
+    -
+      imagem: tablet_quemsomos_0.png
+    -
+      imagem: tablet_servico_0.png
+    -
+      imagem: tablet_tecnologia_0.png
+    -
+      imagem: tablet_contato_0.png
+  mobile:
+    -
+      imagem: mobile_index_0.png
+    -
+      imagem: mobile_quemsomos_0.png
+    -
+      imagem: mobile_servico_0.png
+    -
+      imagem: mobile_tecnologia_0.png
+    -
+      imagem: mobile_contato_0.png
+arbo_lite:
   nome: Arbo (lite)
   texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
   imagem: https://via.placeholder.com/150
--
+  habilidades:
+    responsivo: false
+    front: false
+    back: false
+    banco: false
+  desktop: false
+  tablet: false
+  mobile: false
+metaweb_pro:
   nome: Metaweb PRO
   texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
   imagem: https://via.placeholder.com/150
--
+  habilidades:
+    responsivo: false
+    front: false
+    back: false
+    banco: false
+  desktop: false
+  tablet: false
+  mobile: false
+so_nerds:
   nome: SO Nerds
   texto: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
   imagem: https://via.placeholder.com/150
+  habilidades:
+    responsivo: false
+    front: false
+    back: false
+    banco: false
+  desktop: false
+  tablet: false
+  mobile: false

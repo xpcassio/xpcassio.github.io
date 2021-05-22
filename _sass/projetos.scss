@@ -1,0 +1,21 @@
+.svg-projetos-muted {
+	display: inline-block;
+	width: 25px;
+	// height: 25px;
+
+	svg {
+		fill: #c9c9c9;
+		margin-right: 5px;
+	}
+}
+
+.svg-projetos-selected {
+	display: inline-block;
+	width: 25px;
+	// height: 25px;
+
+	svg {
+		fill: #212529;
+		margin-right: 5px;
+	}
+}
