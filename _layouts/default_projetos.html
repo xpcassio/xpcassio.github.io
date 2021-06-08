@@ -17,8 +17,21 @@
 <body class="body-alt">
 	{% include header_alt.html %}
 	{% include menu.html %}
-	
-	{% assign tmp_dados = site.data[page.tipo][page.projeto] %}
+
+	<script>
+		// console.log("{{ page.url }}");
+		// console.log("{{ page.title }}");
+		// console.log("{{ page.id }}");
+		// console.log("{{ page.categories }}");
+		// console.log("{{ page.collection }}");
+		console.log("{{ page.tipo }}");
+		// console.log("{{ tmp_url }}");
+		// console.log("{{ tmp_dados.id }}");
+		console.log("-----><-----");
+	</script>
+	{% for tmp_dados in site.data[page.tipo] %}
+
+	{% if tmp_dados.id == page.projeto %}
 	<div class="container mb-5">
 		<div class="row">
 			<div class="col-12 col-lg-8 mx-lg-auto div-blog">
@@ -78,6 +91,8 @@
 			</div>
 		</div>
 	</div>
+	{% endif %}
+	{% endfor %}
 
 	{% include footer_alt.html %}
 
