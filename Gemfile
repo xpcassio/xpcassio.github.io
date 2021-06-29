@@ -10,3 +10,8 @@ gem "jekyll", "~> 4.2"
 
 # Fix para o problema com o ruby 3.0.0
 gem "webrick", "~> 1.7"
+
+# Plugins
+group :jekyll_plugins do
+  gem "jekyll-paginate-v2"
+end

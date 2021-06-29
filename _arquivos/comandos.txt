@@ -1,4 +1,4 @@
-cd /Applications/MAMP/htdocs/xpcassio.github.io
+cd Programming/xpcassio.github.io
 - Abre a pasta do projeto
 
 bundle exec jekyll serve

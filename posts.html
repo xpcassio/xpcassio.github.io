@@ -1,21 +1,29 @@
 ---
 layout: default_alt
 title: xpcassio - blog
+pagination: 
+  enabled: true
 ---
 
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-lg-8 mx-lg-auto">
-			{% for post in site.posts %}
+			{% for post in paginator.posts %}
 			<div class="row">
 				<div class="col-12">
-					<div class="row no-gutters border-bottom rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative"> <!-- border shadow-sm -->
-						<div class="col p-4 d-flex flex-column position-static">
-							<strong class="d-inline-block mb-2 text-primary">World</strong>
+					<div class="row no-gutters rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative"> <!-- border shadow-sm -->
+						<div class="col px-4 pt-4 d-flex flex-column position-static">
+							<!-- <strong class="d-inline-block mb-2 text-primary">World</strong> -->
 							<h3 class="mb-0">{{ post.title }}</h3>
-							<div class="mb-1 text-muted">Nov 12</div>
+							<small class="mb-1 text-muted">Cássio Nascimento - 99/99/9999</small>
 							<p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis veritatis deserunt qui ut eaque? Officia neque cum saepe vel, unde ex eius nemo molestias inventore atque voluptates sapiente harum debitis.</p>
 							<a href="{{ post.url }}" class="stretched-link">Continuar lendo</a>
+							<div class="d-flex align-items-center mt-2 pb-4 border-bottom" style="z-index: 2;">
+								{% include /svg/iconmonstr-tag-14.svg %}
+								<a href="#" class="ml-2 text-muted">lorem 1</a>
+								<a href="#" class="ml-2 text-muted">lorem 2</a>
+								<a href="#" class="ml-2 text-muted">lorem 3</a>
+							</div>
 						</div>
 						<!-- <div class="col-auto d-none d-lg-block">
 							<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -29,5 +37,26 @@ title: xpcassio - blog
 			</div>
 			{% endfor %}
 		</div>
+		{% if paginator.total_pages > 1 %}
+		<div class="col-12 d-flex justify-content-center">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item">
+						<a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					{% for trail in paginator.page_trail %}
+						<li class="page-item {% if page.url == trail.path %}active{% endif %}"><a class="page-link" href="{{ trail.path | prepend: site.baseurl }}">{{ trail.num }}</a></li>
+					{% endfor %}
+					<li class="page-item">
+						<a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>	
+		{% endif %}
 	</div>
 </div>

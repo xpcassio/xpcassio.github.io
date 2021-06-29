@@ -1,5 +1,0 @@
-Programação e a ignoraçancia tecnologia
-- programação e a pseudo-ciência.
-
-https://roadmap.sh/frontend
-- o que precisa pra ser um programador frontend.

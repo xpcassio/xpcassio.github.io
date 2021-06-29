@@ -1,0 +1,1 @@
+Programar não é uma ciência exata.

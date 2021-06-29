@@ -1,0 +1,1 @@
+Habilidades escondidas por trás de nomenclaturas (tech lead, fullstack, etc).
