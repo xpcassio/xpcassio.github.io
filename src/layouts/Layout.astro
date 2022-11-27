@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import stylesUrl from '../styles/global.scss?url';
+import Header from '../components/Header.astro';
+import Menu from '../components/Menu.astro';
+import Seo from '../components/Seo.astro';
+import FooterAlt from '../components/FooterAlt.astro';
+---
+
+<!DOCTYPE html>
+<html class="h-100" lang="pt-br">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content={Astro.generator} />
+
+	<!-- SEO -->
+	<Seo />
+
+	<title>{title}</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./public/css/bootstrap.min.css">
+	<link rel="stylesheet" href={stylesUrl}>
+</head>
+<body class="body-alt">
+	<Header />
+	<Menu />
+	
+	<slot />
+
+	<!-- <Footer /> -->
+	<FooterAlt />
+
+	<!-- JS -->
+	<script type="text/javascript" src="./public/js/jquery-3.6.1.slim.min.js"></script>
+	<script type="text/javascript" src="./public/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

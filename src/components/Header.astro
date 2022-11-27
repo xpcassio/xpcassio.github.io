@@ -1,0 +1,53 @@
+---
+import imgAvatar from './public/icon.webp';
+import Icon from '../components/Icon.astro';
+---
+
+<div class="jumbotron jumbotron-one rounded-0 d-print-none">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-4 text-center">
+				<img src={imgAvatar} alt="..." class="rounded-circle img-thumbnail">
+			</div>
+			<div class="col-12 col-sm-8 text-center">
+				<h1 class="nome-geral mt-3 mt-sm-0 mt-lg-4 mb-0">Cássio Nascimento</h1>
+				<hr class="style-hr bg-white"/>
+
+				<a href="mailto:xpcassio@duck.com" class="social-mail d-inline-block mt-1">
+					<Icon icon="envelope-square" />
+					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
+				</a>
+				<a href="https://www.linkedin.com/in/xpcassio/" target="_tab" class="social-linkedin d-inline-block mt-1">
+					<Icon icon="linkedin" />
+				</a>
+				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1">
+					<Icon icon="github-square" />
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- PRINTING -->
+<div class="d-none d-print-flex mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 style="margin-bottom: 0px"><strong>Cássio Nascimento</strong></h1>
+				<h3 style="margin-top: 0px; color:slategrey; margin-bottom: 30px;"><small>Desenvolvedor Fullstack</small></h3>
+				<h4>
+					<strong>Site:</strong> xpcassio.com
+				</h4>
+				<h4>
+					<strong>Email:</strong> xpcassio@duck.com
+				</h4>
+				<h4>
+					<strong>Github:</strong> github.com/xpcassio
+				</h4>
+				<h4>
+					<strong>LinkedIn:</strong> https://www.linkedin.com/in/xpcassio
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>

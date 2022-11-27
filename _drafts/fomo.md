@@ -1,1 +1,0 @@
-O f.o.m.o de se utilizar sempre novas tecnologias dificulta a contratação de profissionais sênior com bom salários? Estaríam os contratantes se aproveitando, inconscientemente, disso?

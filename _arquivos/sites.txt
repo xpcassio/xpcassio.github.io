@@ -1,5 +1,0 @@
-https://simpleicons.org/
-- icones badges
-
-https://github.com/sverrirs/jekyll-paginate-v2
--

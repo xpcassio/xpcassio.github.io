@@ -1,0 +1,33 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html class="h-100" lang="pt-br">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SEO -->
+	{% include seo.html %}
+
+	<title>{{ page.title }}</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body class="d-flex flex-column h-100">
+	{% include header_alt.html %}
+	{% include menu.html %}
+	
+	{{ content }}
+
+	{% include footer_alt.html %}
+
+	<!-- JS -->
+	<script type="text/javascript" src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

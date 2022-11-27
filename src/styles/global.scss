@@ -1,0 +1,33 @@
+/* ============================================= 
+   FONTS 
+   ============================================= */
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black&display=swap");
+
+body.body-alt p {
+	font-size: .9rem;
+}
+
+/* ============================================= 
+   COLORS 
+   ============================================= */
+$new_preto: #262626;
+$vermelho_email: #EA4335;
+$azul_linkdin: #007bb6;
+$cinza_github: #cdd9e5;
+
+/* ============================================= 
+   PAGES 
+   ============================================= */   
+@import 'index';
+@import 'alternativo';
+@import 'post';
+@import 'projetos';
+
+/* ============================================= 
+   LAYOUT 
+   ============================================= */
+@import 'menu';
+@import 'header';
+@import 'header_alt';
+@import 'footer';
+@import 'footer_alt';

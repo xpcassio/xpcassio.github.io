@@ -1,0 +1,17 @@
+[
+    {
+       "name": "Home",
+       "link": "/",
+       "disabled": false
+    },
+    {
+       "name": "Projects",
+       "link": "/projetos",
+       "disabled": true
+    },
+    {
+       "name": "Blog",
+       "link": "/blog",
+       "disabled": true
+    }
+]
