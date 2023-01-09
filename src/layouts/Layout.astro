@@ -10,6 +10,10 @@ import Header from '../components/Header.astro';
 import Menu from '../components/Menu.astro';
 import Seo from '../components/Seo.astro';
 import FooterAlt from '../components/FooterAlt.astro';
+
+import bootstrapUrl from '../../public/css/bootstrap.min.css?url';
+import jqueryUrl from '../../public/js/jquery-3.6.1.slim.min.js?url';
+import bootstrapJsUrl from '../../public/js/bootstrap.bundle.min.js?url';
 ---
 
 <!DOCTYPE html>
@@ -26,7 +30,7 @@ import FooterAlt from '../components/FooterAlt.astro';
 	<title>{title}</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" href={bootstrapUrl}>
 	<link rel="stylesheet" href={stylesUrl}>
 </head>
 <body class="body-alt">
@@ -39,7 +43,7 @@ import FooterAlt from '../components/FooterAlt.astro';
 	<FooterAlt />
 
 	<!-- JS -->
-	<script type="text/javascript" src="/public/js/jquery-3.6.1.slim.min.js"></script>
-	<script type="text/javascript" src="/public/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src={jqueryUrl}></script>
+	<script type="text/javascript" src={bootstrapJsUrl}></script>
 </body>
 </html>
