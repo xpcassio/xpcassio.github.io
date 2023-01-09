@@ -5,7 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import stylesUrl from '../../public/css/global.min.css';
+import stylesUrl from '../../public/css/global.min.css?url';
 import Header from '../components/Header.astro';
 import Menu from '../components/Menu.astro';
 import Seo from '../components/Seo.astro';
@@ -25,7 +25,7 @@ import bootstrapJsUrl from '../../public/js/bootstrap.bundle.min.js?url';
 	<meta name="generator" content={Astro.generator} />
 
 	<!-- SEO -->
-	<!-- <Seo /> -->
+	<Seo />
 
 	<title>{title}</title>
 
