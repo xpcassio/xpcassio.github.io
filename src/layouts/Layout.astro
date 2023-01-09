@@ -5,7 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import '../styles/global.scss';
+import stylesUrl from '../../public/css/global.min.css';
 import Header from '../components/Header.astro';
 import Menu from '../components/Menu.astro';
 import Seo from '../components/Seo.astro';
@@ -31,7 +31,7 @@ import bootstrapJsUrl from '../../public/js/bootstrap.bundle.min.js?url';
 
 	<!-- CSS -->
 	<link rel="stylesheet" href={bootstrapUrl}>
-	<!-- <link rel="stylesheet" href={stylesUrl}> -->
+	<link rel="stylesheet" href={stylesUrl}>
 </head>
 <body class="body-alt">
 	<Header />
