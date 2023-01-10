@@ -1,13 +1,23 @@
 ---
-const year = new Date().getFullYear();
+// lang
+let developedText;
+let printText;
+if (Astro.url.pathname == '/en') {
+	developedText = 'Developed with ❤️ by <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a>';
+	printText = 'Dynamically generated for printing in A4 format. For more information, contact <strong>xpcassio@duck.com</strong> and for a better view, visit <strong>xpcassio.com</strong>. Thank you very much!';
+}
+else {
+	developedText = 'Desenvolvido com ❤️ por <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a>';
+	printText = 'Gerado dinamicamente para impressão em formato A4. Para mais informações entre em contato pelo email <strong>xpcassio@duck.com</strong> e para uma melhor visualização acesse <strong>xpcassio.com</strong>. Muito obrigado!';
+}
 ---
 
 <footer class="footer mt-auto py-3">
 	<div class="container d-print-none">
-		<p>&#169; {year} Todos os direitos reservados. Desenvolvido com ❤️ por <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a></p>
+		<p><Fragment set:html={developedText} /></p>
 	</div>
 
 	<div class="container d-none d-print-flex">
-		<p>Gerado dinamicamente para impressão em formato A4. Para mais informações entre em contato pelo email <strong>xpcassio@duck.com</strong> e para uma melhor visualização acesse <strong>xpcassio.com</strong>. Muito obrigado!</p>
+		<p><Fragment set:html={printText} /></p>
 	</div>
 </footer>

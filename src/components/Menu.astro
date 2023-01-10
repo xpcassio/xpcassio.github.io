@@ -1,13 +1,22 @@
 ---
 import Icon from '../components/Icon.astro';
-import dataNavs from '../datas/pt_navegacao.json';
+import dataNavsPt from '../datas/pt_navegacao.json';
+import dataNavsEn from '../datas/en_navegacao.json';
+
+// lang
+const tmpPathname = Astro.url.pathname.replace("en", "");
+let dataNavs;
+if (Astro.url.pathname == '/en')
+	dataNavs = dataNavsEn;
+else
+	dataNavs = dataNavsPt;
 
 // Validations
-const urlValidation = (Astro.url.pathname === '/') ? true : false;
+const urlValidation = (tmpPathname === '/') ? true : false;
 
 // Functions
 function isActive(menuItem) {
-	return (menuItem.link === Astro.url.pathname) ? true : false;
+	return (menuItem.link === tmpPathname) ? true : false;
 }
 ---
 

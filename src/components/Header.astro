@@ -1,6 +1,13 @@
 ---
 import imgAvatar from '../../public/icon.webp';
 import Icon from '../components/Icon.astro';
+
+// lang
+let linkedUrl;
+if (Astro.url.pathname == '/en')
+	linkedUrl = 'https://www.linkedin.com/in/xpcassio/?locale=en_US';
+else
+	linkedUrl = 'https://www.linkedin.com/in/xpcassio/';
 ---
 
 <div class="jumbotron jumbotron-one rounded-0 d-print-none">
@@ -17,7 +24,7 @@ import Icon from '../components/Icon.astro';
 					<Icon icon="envelope-square" />
 					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
 				</a>
-				<a href="https://www.linkedin.com/in/xpcassio/" target="_tab" class="social-linkedin d-inline-block mt-1">
+				<a href={linkedUrl} target="_tab" class="social-linkedin d-inline-block mt-1">
 					<Icon icon="linkedin" />
 				</a>
 				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1">
