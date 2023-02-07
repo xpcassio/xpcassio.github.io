@@ -1,0 +1,35 @@
+{
+    "slug": "linux",
+    "links": [
+        {
+            "nome": "Terminal",
+            "links": [
+                {
+                    "nome": "Gogh",
+                    "link": "https://github.com/Mayccoll/Gogh",
+                    "descricao": "Pantheon Terminal, Tilix, and XFCE4 Terminal."
+                }
+            ]
+        },
+        {
+            "nome": "Distros",
+            "links": [
+                {
+                    "nome": "Elementary OS",
+                    "link": "https://elementary.io/",
+                    "descricao": "O substituto para Windows e macOS rápido, aberto e que respeita a privacidade."
+                },
+                {
+                    "nome": "Ubuntu",
+                    "link": "https://ubuntu.com/",
+                    "descricao": "Ubuntu is an open source software operating system that runs from the desktop, to the cloud, to all your internet connected things"
+                },
+                {
+                    "nome": "Ubuntu budgie",
+                    "link": "https://ubuntubudgie.org/",
+                    "descricao": "Ubuntu Budgie is a community developed distribution, integrating the Budgie Desktop Environment with Ubuntu at its core."
+                }
+            ]
+        }
+    ]
+}

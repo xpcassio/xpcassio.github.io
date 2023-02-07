@@ -1,0 +1,25 @@
+{
+    "slug": "business",
+    "links": [
+        {
+            "nome": "Finances",
+            "links": [
+                {
+                    "nome": "Crater",
+                    "link": "https://craterapp.com/",
+                    "descricao": "Open-source invoice app."
+                }
+            ]
+        },
+        {
+            "nome": "Organization",
+            "links": [
+                {
+                    "nome": "Fyi",
+                    "link": "https://usefyi.com/templates/freelancer-templates/",
+                    "descricao": "All the free resources and templates you need to get work done as a freelancer."
+                }
+            ]
+        }
+    ]
+}

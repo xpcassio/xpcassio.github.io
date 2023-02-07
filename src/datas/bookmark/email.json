@@ -1,0 +1,15 @@
+{
+    "slug": "email",
+    "links": [
+        {
+            "nome": "Templates",
+            "links": [
+                {
+                    "nome": "Cerberus",
+                    "link": "https://www.cerberusemail.com/",
+                    "descricao": "A few simple, but solid patterns for responsive, accessible HTML email in (almost) every email client."
+                }
+            ]
+        }
+    ]
+}

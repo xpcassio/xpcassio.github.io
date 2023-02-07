@@ -1,0 +1,35 @@
+{
+    "slug": "osx",
+    "links": [
+        {
+            "nome": "Config",
+            "links": [
+                {
+                    "nome": "Brew",
+                    "link": "https://brew.sh/",
+                    "descricao": "The Missing Package Manager for macOS (or Linux)"
+                }
+            ]
+        },
+        {
+            "nome": "Apps",
+            "links": [
+                {
+                    "nome": "Marktext",
+                    "link": "https://github.com/marktext/marktext/",
+                    "descricao": "A simple and elegant open-source markdown editor that focused on speed and usability."
+                },
+                {
+                    "nome": "Hyper",
+                    "link": "https://hyper.is/",
+                    "descricao": "Eletron-based terminal build on HTML/CSS/JS."
+                },
+                {
+                    "nome": "Etcher",
+                    "link": "https://ubuntubudgie.org/",
+                    "descricao": "Flash OS images to SD cards & USB drives, safely and easily."
+                }
+            ]
+        }
+    ]
+}

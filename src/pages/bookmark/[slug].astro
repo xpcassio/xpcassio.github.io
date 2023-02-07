@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import { Debug } from 'astro/components';
+import LayoutAlt from '@layouts/LayoutAlt.astro';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('bookmark');
+  const allJson = await Astro.glob('../../datas/bookmark/*.json')
+
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry, links: allJson.filter(link => link.slug === entry.slug) }
+  }));
+}
+
+// 2. When it's time to render, you can get the entry directly from the prop
+const { entry, links } = Astro.props;
+const finalLinks = links[0].links
+---
+
+<LayoutAlt title="xpcassio - Bookmark">
+  <div class="container mb-5">
+      <div class="row">
+          <div class="col-12">
+              <h1>{entry.data.title}</h1>
+              <p>{entry.data.description}</p>
+          </div>
+
+          {finalLinks.map(link => (
+            <div class="col-12">
+                <div class="hr-especial">
+                    <hr>
+                    <h3 class="mb-0">{link.nome}</h3>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">Link</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                              {link.links.map(altUltra => (
+                                  <tr>
+                                      <td><a href={altUltra.link}>{altUltra.nome}</a></td>
+                                      <td>{altUltra.descricao}</td>
+                                  </tr>
+                              ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          ))}
+      </div>
+  </div>
+</LayoutAlt>

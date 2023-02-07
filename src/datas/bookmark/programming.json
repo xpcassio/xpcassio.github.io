@@ -1,0 +1,45 @@
+{
+    "slug": "programming",
+    "links": [
+        {
+            "nome": "Tools",
+            "links": [
+                {
+                    "nome": "Ibis",
+                    "link": "https://github.com/themsaid/ibis/",
+                    "descricao": "This PHP tool helps you write eBooks in markdown."
+                },
+                {
+                    "nome": "Ruveal",
+                    "link": "https://github.com/hakimel/reveal.js",
+                    "descricao": "Open source HTML presentation framework. It enables anyone with a web browser to create fully featured and beautiful presentations for free."
+                }
+            ]
+        },
+        {
+            "nome": "SEO",
+            "links": [
+                {
+                    "nome": "9Elements SEO",
+                    "link": "https://9elements.com/seo-cheat-sheet/",
+                    "descricao": "SEO chart flow."
+                },
+                {
+                    "nome": "Umami",
+                    "link": "https://umami.is/",
+                    "descricao": "Open source, privacy-focused alternative to Google Analytics."
+                }
+            ]
+        },
+        {
+            "nome": "Apps",
+            "links": [
+                {
+                    "nome": "Sizzy",
+                    "link": "https://sizzy.co/",
+                    "descricao": "Browse (and test) websites on different screen sizes and technologies (like mobile touch)."
+                }
+            ]
+        }
+    ]
+}

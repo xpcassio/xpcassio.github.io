@@ -1,5 +1,19 @@
 ---
+export interface Props {
+	title: string;
+}
 
+const { title } = Astro.props;
+
+import stylesUrl from '../../public/css/global.min.css?url';
+import HeaderAlt from '../components/HeaderAlt.astro';
+import Menu from '../components/Menu.astro';
+import Seo from '../components/Seo.astro';
+import FooterAlt from '../components/FooterAlt.astro';
+
+import bootstrapUrl from '../../public/css/bootstrap.min.css?url';
+import jqueryUrl from '../../public/js/jquery-3.6.1.slim.min.js?url';
+import bootstrapJsUrl from '../../public/js/bootstrap.bundle.min.js?url';
 ---
 
 <!DOCTYPE html>
@@ -8,26 +22,28 @@
 	<!-- META -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content={Astro.generator} />
 
 	<!-- SEO -->
-	{% include seo.html %}
+	<Seo />
 
-	<title>{{ page.title }}</title>
+	<title>{title}</title>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/estilo.css">
+	<link rel="stylesheet" href={bootstrapUrl}>
+	<link rel="stylesheet" href={stylesUrl}>
 </head>
 <body class="d-flex flex-column h-100">
-	{% include header_alt.html %}
-	{% include menu.html %}
+	<HeaderAlt />
+	<Menu />
 	
-	{{ content }}
+	<slot />
 
-	{% include footer_alt.html %}
+	<!-- <Footer /> -->
+	<FooterAlt />
 
 	<!-- JS -->
-	<script type="text/javascript" src="/assets/js/jquery-3.5.1.slim.min.js"></script>
-	<script type="text/javascript" src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src={jqueryUrl}></script>
+	<script type="text/javascript" src={bootstrapJsUrl}></script>
 </body>
 </html>

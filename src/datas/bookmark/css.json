@@ -1,0 +1,40 @@
+{
+    "slug": "css",
+    "links": [
+        {
+            "nome": "Frameworks",
+            "links": [
+                {
+                    "nome": "Tailwind CSS",
+                    "link": "https://tailwindcss.com/",
+                    "descricao": "A utility-first CSS framework for rapidly building custom designs."
+                }
+            ]
+        },
+        {
+            "nome": "Frameworks - utilities",
+            "links": [
+                {
+                    "nome": "Tailblocks",
+                    "link": "https://tailblocks.cc/",
+                    "descricao": "Ready-to-use Tailwind CSS blocks."
+                }
+            ]
+        },
+        {
+            "nome": "Gradient",
+            "links": [
+                {
+                    "nome": "Gradient Magic",
+                    "link": "https://www.gradientmagic.com/",
+                    "descricao": "A Free Gallery of Fantastic and Unique CSS Gradients."
+                },
+                {
+                    "nome": "",
+                    "link": "",
+                    "descricao": ""
+                }
+            ]
+        }
+    ]
+}

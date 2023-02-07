@@ -18,6 +18,10 @@ const urlValidation = (tmpPathname === '/') ? true : false;
 function isActive(menuItem) {
 	return (menuItem.link === tmpPathname) ? true : false;
 }
+
+function isAltDesk(index) {
+	return (index === 0 && !urlValidation) ? true : false;
+}
 ---
 
 <div class="jumbotron jumbotron-two rounded-0 mb-5 border-top border-dark d-print-none">
@@ -30,9 +34,9 @@ function isActive(menuItem) {
 
 			<div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarSupportedContent">
 				<ul class:list={['navbar-nav', {'mx-auto': urlValidation}]}>
-					{dataNavs.map((nav) =>
+					{dataNavs.map((nav, index) =>
 						<li class:list={["nav-item text-center", {'d-none': nav.disabled}]}>
-							<a class:list={["nav-link", {active: isActive(nav)}]} href={nav.link}>{nav.name}</a>
+							<a class:list={["nav-link", {active: isActive(nav), 'pl-md-0': isAltDesk(index)}]} href={nav.link}>{nav.name}</a>
 						</li>
 					)}
 				</ul>

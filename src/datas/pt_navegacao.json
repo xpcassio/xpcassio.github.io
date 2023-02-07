@@ -1,17 +1,22 @@
 [
-    {
-       "name": "Inicial",
-       "link": "/",
-       "disabled": false
-    },
-    {
-       "name": "Projetos",
-       "link": "/projetos",
-       "disabled": true
-    },
-    {
-       "name": "Blog",
-       "link": "/blog",
-       "disabled": true
-    }
+   {
+      "name": "Inicial",
+      "link": "/",
+      "disabled": false
+   },
+   {
+      "name": "Projetos",
+      "link": "/projetos",
+      "disabled": true
+   },
+   {
+      "name": "Blog",
+      "link": "/blog",
+      "disabled": true
+   },
+   {
+      "name": "Favoritos",
+      "link": "/bookmark",
+      "disabled": false
+   }
 ]
