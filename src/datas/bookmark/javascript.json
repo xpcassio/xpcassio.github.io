@@ -1,0 +1,15 @@
+{
+    "slug": "javascript",
+    "links": [
+        {
+            "nome": "Vanilla",
+            "links": [
+                {
+                    "nome": "HTML Dom",
+                    "link": "https://htmldom.dev/",
+                    "descricao": "Manage HTML DOM with vanilla JavaScript."
+                }
+            ]
+        }
+    ]
+}

@@ -21,13 +21,13 @@ const finalLinks = links[0].links
 <LayoutAlt title="xpcassio - Bookmark">
   <div class="container mb-5">
       <div class="row">
-          <div class="col-12">
+          <div class="col-12 mb-4">
               <h1>{entry.data.title}</h1>
-              <p>{entry.data.description}</p>
+              <p class="mb-0">{entry.data.description}</p>
           </div>
 
           {finalLinks.map(link => (
-            <div class="col-12">
+            <div class="col-12 mt-3">
                 <div class="hr-especial">
                     <hr>
                     <h3 class="mb-0">{link.nome}</h3>

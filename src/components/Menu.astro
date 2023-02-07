@@ -2,14 +2,19 @@
 import Icon from '../components/Icon.astro';
 import dataNavsPt from '../datas/pt_navegacao.json';
 import dataNavsEn from '../datas/en_navegacao.json';
+import { Debug } from 'astro/components';
 
 // lang
-const tmpPathname = Astro.url.pathname.replace("en", "");
+let tmpPathname = Astro.url.pathname.replace("en", "");
 let dataNavs;
 if (Astro.url.pathname == '/en')
 	dataNavs = dataNavsEn;
 else
 	dataNavs = dataNavsPt;
+
+// Fix pathName
+const pathArray = tmpPathname.split('/')
+tmpPathname = `/${pathArray[1]}`
 
 // Validations
 const urlValidation = (tmpPathname === '/') ? true : false;

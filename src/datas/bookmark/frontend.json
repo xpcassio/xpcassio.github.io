@@ -1,0 +1,15 @@
+{
+    "slug": "frontend",
+    "links": [
+        {
+            "nome": "Tools",
+            "links": [
+                {
+                    "nome": "Vite",
+                    "link": "https://vitejs.dev/",
+                    "descricao": "Next Generation Frontend Tooling."
+                }
+            ]
+        }
+    ]
+}
