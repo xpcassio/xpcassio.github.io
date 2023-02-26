@@ -1,0 +1,15 @@
+{
+    "slug": "pc",
+    "links": [
+        {
+            "nome": "Boot",
+            "links": [
+                {
+                    "nome": "Ventoy",
+                    "link": "https://www.ventoy.net/en/index.html",
+                    "descricao": "Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files."
+                }
+            ]
+        }
+    ]
+}
