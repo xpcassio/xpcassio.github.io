@@ -1,0 +1,24 @@
+---
+// import { Debug } from 'astro/components';
+import { getCollection } from 'astro:content';
+import LayoutAlt from '@layouts/LayoutAlt.astro';
+import BlogPost from '@components/BlogPost.astro';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry }
+  }));
+}
+
+// 2. When it's time to render, you can get the entry directly from the prop
+const { entry } = Astro.props;
+---
+
+<LayoutAlt title="xpcassio - Bookmark">
+  <BlogPost>
+    
+  </BlogPost>
+</LayoutAlt>

@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import LayoutAlt from '../../layouts/LayoutAlt.astro';
+
+// Get the blog list
+const blogList = await getCollection('blog');
+---
+
+<LayoutAlt title="xpcassio - Blog">
+    <div class="container">
+        <h1>Blog</h1>
+        <ul>
+            {blogList.map(blogPostEntry => (
+                <li>
+                  <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</LayoutAlt>
