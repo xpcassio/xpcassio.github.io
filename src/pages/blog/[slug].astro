@@ -1,5 +1,5 @@
 ---
-// import { Debug } from 'astro/components';
+import { Debug } from 'astro/components';
 import { getCollection } from 'astro:content';
 import LayoutAlt from '@layouts/LayoutAlt.astro';
 import BlogPost from '@components/BlogPost.astro';
@@ -14,11 +14,12 @@ export async function getStaticPaths() {
 }
 
 // 2. When it's time to render, you can get the entry directly from the prop
-const { entry } = Astro.props;
+const { entry } = Astro.props
+const { Content } = await entry.render();
 ---
 
-<LayoutAlt title="xpcassio - Bookmark">
-  <BlogPost>
-    
+<LayoutAlt title="xpcassio - Blog">
+  <BlogPost data={entry.data}>
+    <Content />
   </BlogPost>
 </LayoutAlt>

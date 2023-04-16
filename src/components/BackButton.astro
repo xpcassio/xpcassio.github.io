@@ -1,0 +1,14 @@
+---
+import Icon from '@components/Icon.astro';
+
+// Component props
+const {where} = Astro.props;
+
+// Where is placed
+const placed = (where === 'menu') ? 'mt-1 mt-md-0' : 'mt-0 mb-5';
+const position = (where === 'menu') ? 'text-center text-md-right' : 'text-md-left';
+---
+
+<div class={`${position} w-100`}>
+    <button type="button" class={`btn btn-secondary ${placed} ml-md-auto`} onclick="window.history.back();"><Icon icon="chevron-left" />Voltar</button>
+</div>

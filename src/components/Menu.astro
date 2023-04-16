@@ -1,8 +1,8 @@
 ---
-import Icon from '../components/Icon.astro';
+import Icon from '@components/Icon.astro';
+import BackButton from '@components/BackButton.astro';
 import dataNavsPt from '../datas/pt_navegacao.json';
 import dataNavsEn from '../datas/en_navegacao.json';
-import { Debug } from 'astro/components';
 
 // lang
 let tmpPathname = Astro.url.pathname.replace("en", "");
@@ -58,9 +58,7 @@ function isAltDesk(index) {
 				}
 
 				{tmpPathname === '/projetos' || tmpPathname === '/bookmark' &&
-					<div class="text-center text-md-right w-100">
-						<button type="button" class="btn btn-secondary mt-1 mt-md-0 ml-md-auto" onclick="window.history.back();"><Icon icon="chevron-left" />Voltar</button>
-					</div>
+					<BackButton where="menu" />
 				}
 			</div>
 		</nav>

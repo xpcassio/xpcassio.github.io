@@ -1,33 +1,53 @@
 ---
-import Icon from '../components/Icon.astro';
+import Icon from '@components/Icon.astro';
+import BackButton from '@components/BackButton.astro';
+
+// 
+const {data} = Astro.props;
+
+// Format date
+var date = new Date(data.pubDate);
+var newdate= (date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear();
 ---
 <div class="container mb-5">
     <div class="row">
+        <div class="col-12 col-lg-8 mx-lg-auto">
+            <BackButton where="blog" />
+        </div>
         <div class="col-12 col-lg-8 mx-lg-auto div-blog">
-            <h1 class="blog-header mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, possimus!</h1>
-            <h5 class="blog-description mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ex iusto, quis ipsa maxime sit alias tempore molestias. Fuga architecto ad porro consequuntur rem aliquid.</h5>
+            <h1 class="blog-header mb-4">{ data.title }</h1>
+            <h5 class="blog-description mb-4 text-muted">{ data.description }</h5>
         </div>
 
         <div class="col-12 col-lg-8 mx-lg-auto">
-            <div class="media media-post">
+            <!-- <div class="media media-post">
                 <img src="{{ site.baseavatar }}" alt="..." class="rounded-circle img-thumbnail mr-3">
                 <div class="media-body">
-                    <h5 class="mt-2 mb-0">Por Cássio Nascimento</h5>
+                    <h5 class="mt-2 mb-0">Por { data.author }</h5>
                     <span class="text-muted">
                         <Icon icon="calendar-day" />
-                        11/11/1111 00h00
+                        { newdate }
                     </span>
                 </div>
+            </div> -->
+
+            <div class="media-post">
+                <h5 class="mt-2 mb-0">Por { data.author }</h5>
+                <span class="text-muted d-block">
+                    <Icon icon="calendar-day" />
+                    { newdate }
+                </span>
+                <span class="text-muted d-block">
+                    <Icon icon="iconmonstr-tag-14" />
+                    { newdate }
+                </span>
             </div>
 
             <hr class="mt-4 mb-5" />
         </div>
         
         <div class="col-12 col-lg-8 mx-lg-auto">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis necessitatibus cum ducimus similique vero. Inventore ad sed repellat quisquam pariatur dolorum, labore quos. Nostrum, consequuntur. Explicabo, sed rem accusamus dolorem!</p>
+            <slot />
         </div>
 
         <div class="col-12 col-lg-8 mx-lg-auto mt-5">

@@ -1,12 +1,12 @@
 ---
 title: 'Keychron keyboards on Linux + Bluetooth fixes'
-pubDate: 2022-07-01
+pubDate: 2023-04-16
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+author: 'Cássio Nascimento'
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
-    alt: 'The Astro logo with the word One.'
-tags: ["astro", "blogging", "learning in public"]
+    url: ''
+    alt: ''
+tags: ["keychron", "keyboard", "bluetooth"]
 ---
 
 Here is the best setup (I think so :D) for K-series Keychron keyboards on Linux.
