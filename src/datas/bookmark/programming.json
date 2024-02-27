@@ -13,6 +13,11 @@
                     "nome": "Ruveal",
                     "link": "https://github.com/hakimel/reveal.js",
                     "descricao": "Open source HTML presentation framework. It enables anyone with a web browser to create fully featured and beautiful presentations for free."
+                },
+                {
+                    "nome": "Husky",
+                    "link": "https://typicode.github.io/husky/",
+                    "descricao": "Husky enhances your commits and more 🐶 woof! Automatically lint your commit messages, code, and run tests upon committing or pushing."
                 }
             ]
         },
