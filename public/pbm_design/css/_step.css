@@ -1,0 +1,57 @@
+.pbm-steps {
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.pbm-steps .progress {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+}
+
+.pbm-steps .progress-bar {
+    background-color: var(--pbm-success);
+}
+
+.pbm-steps .step-item {
+    text-align: center;
+    position: relative;
+    top: 22px;
+}
+
+.pbm-steps .step-item .step-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--pbm-grey-color-tertiary);
+}
+
+.pbm-steps .step-item .step-circle > svg {
+    display: none;
+}
+
+.pbm-steps .step-item .step-title {
+    margin-top: 20px;
+}
+
+.pbm-steps .step-done .step-title {
+    color: var(--pbm-success);
+}
+
+.pbm-steps .step-done .step-circle {
+    background-color: var(--pbm-success);
+    width: 24px;
+    height: 24px;
+}
+
+.pbm-steps .step-done .step-circle > svg {
+    bottom: 2px;
+    display: inline;
+    fill: var(--pbm-white);
+    height: 14px;
+    position: relative;
+    width: 14px;
+
+}

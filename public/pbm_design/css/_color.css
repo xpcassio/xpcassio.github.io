@@ -1,0 +1,7 @@
+.text-pbm-grey {
+    color: var(--pbm-grey-font);
+}
+
+.text-pbm-orange-secondary {
+    color: var(--pbm-orange-color-secondary);
+}
