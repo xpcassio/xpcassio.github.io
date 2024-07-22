@@ -20,11 +20,11 @@ tmpPathname = `/${pathArray[1]}`
 const urlValidation = (tmpPathname === '/') ? true : false;
 
 // Functions
-function isActive(menuItem) {
+function isActive(menuItem: { name?: string; link: any; disabled?: boolean; }) {
 	return (menuItem.link === tmpPathname) ? true : false;
 }
 
-function isAltDesk(index) {
+function isAltDesk(index: number) {
 	return (index === 0 && !urlValidation) ? true : false;
 }
 ---
