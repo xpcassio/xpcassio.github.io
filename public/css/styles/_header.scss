@@ -30,19 +30,19 @@
 		}
 	}
 
-	.social-mail:focus,.social-mail:hover {
+	.social-mail:focus,.social-mail:hover,.social-mail.social-active {
 		svg {
 			fill: $vermelho_email;
 		}
 	}
 
-	.social-linkedin:focus,.social-linkedin:hover {
+	.social-linkedin:focus,.social-linkedin:hover,.social-linkedin.social-active {
 		svg {
 			fill: $azul_linkdin;
 		}
 	}
 
-	.social-github:focus,.social-github:hover {
+	.social-github:focus,.social-github:hover,.social-github.social-active {
 		svg {
 			fill: $cinza_github;
 		}

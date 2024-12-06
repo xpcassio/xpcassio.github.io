@@ -1,0 +1,17 @@
+.alert-success {
+    background-color: var(--pbm-success);
+    border-radius: 50px;
+    color: var(--pbm-white);
+}
+
+.alert-danger {
+    background-color: var(--pbm-danger);
+    border-radius: 50px;
+    color: var(--pbm-white);
+}
+
+.alert svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--pbm-white);
+}

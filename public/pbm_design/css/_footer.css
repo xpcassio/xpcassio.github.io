@@ -1,0 +1,62 @@
+.pbm-footer {
+    border-top: 4px solid var(--pbm-orange-primary);
+    background-color: var(--pbm-grey-tertiary);
+}
+
+.pbm-footer-body-first {
+    height: 100%;
+    margin-top: 50px;
+}
+
+.pbm-footer-body-first .pbm-footer-logo-1 {
+    width: 210px;
+}
+
+.pbm-footer-body-first .pbm-footer-logo-2 {
+    margin-top: 30px;
+    width: 230px;
+}
+
+.pbm-footer-body-first h4, .pbm-footer-body-first h5, .pbm-footer-body-first h6 {
+    color: var(--pbm-grey-font);
+    margin-bottom: 0;
+}
+
+.pbm-footer-body-first p {
+    color: var(--pbm-grey-font);
+}
+
+.pbm-footer-body-first a, .pbm-footer-body-first .nav-item > a {
+    color: var(--pbm-orange-color-secondary) !important;
+    text-decoration: none;
+}
+
+.pbm-footer-body-first a:hover, .pbm-footer-body-first .nav-item > a:hover {
+    text-decoration: underline;
+}
+
+.pbm-footer-body-second {
+    margin-bottom: 15px;
+}
+
+.pbm-footer-body-second p {
+    color: var(--pbm-grey-font-secondary);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.pbm-footer-body-second img {
+    height: 30px;
+    margin-left: 20px;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .pbm-footer {
+        height: 416px;
+    }
+
+    .pbm-footer-body-first {
+        margin-top: 0;
+    }
+}

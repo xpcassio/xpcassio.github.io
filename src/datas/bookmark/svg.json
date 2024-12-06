@@ -1,0 +1,20 @@
+{
+    "slug": "svg",
+    "links": [
+        {
+            "nome": "Utilities",
+            "links": [
+                {
+                    "nome": "SVG Hub",
+                    "link": "https://svghub.vercel.app/",
+                    "descricao": "A library of over 70 custom-color elements ready to paste into your project."
+                },
+                {
+                    "nome": "SVG Generators",
+                    "link": "https://www.smashingmagazine.com/2021/03/svg-generators/",
+                    "descricao": "For everything from shapes and backgrounds to SVG path visualizers and SVG → JSX generators"
+                }
+            ]
+        }
+    ]
+}

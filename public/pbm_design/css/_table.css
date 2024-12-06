@@ -1,0 +1,14 @@
+.pbm-table-color th {
+    background-color: var(--pbm-grey-tertiary);
+    color: var(--pbm-grey-font);
+    font-size: 22px;
+}
+
+.table > :not(caption) > * > * {
+    vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) > * {
+    background-color: var(--pbm-grey-secondary);
+    box-shadow: none;
+}

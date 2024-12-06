@@ -1,19 +1,21 @@
 {
-  "name": "@example/basics",
+  "name": "@xpcassio/website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sass": "sass",
+    "sass-dev": "sass public/css/styles/global.scss public/css/global.min.css --style compressed"
   },
   "dependencies": {
-    "astro": "^2.0.2"
+    "astro": "^4.0.0"
   },
   "devDependencies": {
-    "sass": "^1.55.0"
+    "sass": "^1.77.0"
   }
 }

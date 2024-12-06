@@ -1,0 +1,31 @@
+.btn-pbm {
+    background-color: var(--pbm-orange-color-secondary);
+    color: white;
+    display: flex;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+}
+
+.btn-pbm svg {
+    fill: var(--pbm-white);
+    height: 100%;
+    margin-right: 10px;
+    width: 13px;
+}
+
+.btn-pbm:hover,.btn-pbm:active,.btn-pbm:focus,.btn-pbm:focus-visible,.btn-pbm:first-child:active  {
+    background-color: var(--pbm-orange-color-secondary-dark) !important;
+    border-color: var(--pbm-orange-color-secondary-dark) !important;
+    color: white !important;
+}
+
+.btn-pbm-pill {
+    border-radius: 20px;
+}
+
+.btn-pbm-outline {
+    border-radius: 20px;
+    background: none;
+    border: 2px solid var(--pbm-orange-color-secondary);
+    color: var(--pbm-orange-color-secondary);
+}

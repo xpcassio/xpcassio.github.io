@@ -1,0 +1,27 @@
+:root {
+    --pbm-white: #FFFFFF;
+
+    --pbm-orange-primary: #FF7800;
+    --pbm-orange-color-secondary: #EF5A10;
+    --pbm-orange-color-secondary-dark: #e3560f;
+    --pbm-orange-color-tertiary: #F4AE8B;
+    --pbm-orange-color-light: #FFEFE7;
+
+    --pbm-grey-primary: #c3c3c3;
+    --pbm-grey-secondary: #FAFBFB;
+    --pbm-grey-tertiary: #F3F3F4;
+    --pbm-grey-forth: #C1C1C2;
+
+    --pbm-success: #00853C;
+    --pbm-success-secondary: #518613;
+    --pbm-danger: #E22849;
+    --pbm-danger-secondary: #BE0044;
+
+    --pbm-grey-font: #555555;
+    --pbm-grey-font-secondary: #686868;
+    --pbm-grey-font-tertiary: #282929;
+    --pbm-grey-color-tertiary: #D7D7D8;
+
+    /* NAVBAR */
+    --pbm-navbar-height: 96px;
+}

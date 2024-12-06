@@ -10,6 +10,16 @@
                     "descricao": "Next Generation Frontend Tooling."
                 }
             ]
+        },
+        {
+            "nome": "Articles",
+            "links": [
+                {
+                    "nome": "How to fix a bad user interface",
+                    "link": "https://www.scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack/",
+                    "descricao": "Awkward UI is a missing loading indicator. It's forgetting to tell your customer where something went wrong."
+                }
+            ]
         }
     ]
 }
