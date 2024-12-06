@@ -13,7 +13,7 @@
     "sass-dev": "sass public/css/styles/global.scss public/css/global.min.css --style compressed"
   },
   "dependencies": {
-    "astro": "^4.0.0"
+    "astro": "^5.0.3"
   },
   "devDependencies": {
     "sass": "^1.77.0"
