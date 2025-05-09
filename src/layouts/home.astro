@@ -1,0 +1,28 @@
+---
+import HeaderHome from '@components/HeaderHome.astro';
+
+// CSS
+import '@styles/bootstrap.min.css';
+import '@styles/global.min.css';
+// import '@styles/sass/style.scss'; PROVAVELMENTE NÃO FUNCIONA
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { currentLocale } = Astro;
+---
+<!DOCTYPE html>
+<html class="h-100" lang={currentLocale}>
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>{title}</title>
+</head>
+<body>
+	<HeaderHome />
+	<slot />
+</body>
+</html>
