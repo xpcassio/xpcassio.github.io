@@ -5,6 +5,7 @@ import SvgEnvelopeSquare from '@images/svg/envelope-square.svg';
 import SvgGithubSquare from '@images/svg/github-square.svg';
 import SvgLinkedIn from '@images/svg/linkedin.svg';
 
+// Internacionalization
 let linkedUrl;
 const currentLocale = Astro.currentLocale;
 if (currentLocale === 'en')
@@ -22,15 +23,15 @@ else
 				<h1 class="nome-geral mt-3 mt-sm-0 mt-lg-4 mb-0">Cássio Nascimento</h1>
 				<hr class="style-hr bg-white"/>
 
-				<a href="mailto:xpcassio@duck.com" class="social-mail d-inline-block mt-1">
+				<a href="mailto:xpcassio@duck.com" class="social-mail social-active d-inline-block mt-1">
 					<SvgEnvelopeSquare />
+					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
 				</a>
 				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1">
 					<SvgGithubSquare />
 				</a>
-				<a href={linkedUrl} target="_tab" class="social-linkedin social-active d-inline-block mt-1">
+				<a href={linkedUrl} target="_tab" class="social-linkedin d-inline-block mt-1">
 					<SvgLinkedIn />
-					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
 				</a>
 			</div>
 		</div>

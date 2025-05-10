@@ -1,5 +1,6 @@
 ---
 import HeaderHome from '@components/HeaderHome.astro';
+import MenuHome from '@components/MenuHome.astro';
 
 // CSS
 import '@styles/bootstrap.min.css';
@@ -23,6 +24,7 @@ const { currentLocale } = Astro;
 </head>
 <body>
 	<HeaderHome />
+	<MenuHome />
 	<slot />
 </body>
 </html>
