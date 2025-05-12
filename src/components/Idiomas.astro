@@ -1,0 +1,23 @@
+---
+// Internacionalization
+let header;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+    header = "Idioms";
+}
+else {
+    header =  "Idiomas";
+}
+---
+<div class="col-12 col-lg-4 mb-5 mt-lg-5">
+    <div class="new-header">
+        <hr class="d-print-none"/>
+        <h3>{header}</h3>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-0">
+            <strong class="clearfix">Inglês</strong>
+            <small class="text-muted clearfix">ILAC • International Language Academy of Canada</small>
+        </div>
+    </div>
+</div>
