@@ -5,11 +5,11 @@ import { cursos_header_default, cursos_en, cursos_header_en, cursos_default } fr
 let header,cursos;
 const currentLocale = Astro.currentLocale;
 if (currentLocale === 'en') {
-    header = cursos_header_default;
+    header = cursos_header_en;
     cursos = cursos_en;
 }
 else {
-    header = cursos_header_en;
+    header = cursos_header_default;
     cursos = cursos_default;
 }
 

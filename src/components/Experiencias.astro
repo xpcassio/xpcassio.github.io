@@ -5,11 +5,11 @@ import { experiencias_header_default, experiencias_en, experiencias_header_en, e
 let header,experiencias;
 const currentLocale = Astro.currentLocale;
 if (currentLocale === 'en') {
-    header = experiencias_header_default;
+    header = experiencias_header_en;
     experiencias = experiencias_en;
 }
 else {
-    header = experiencias_header_en;
+    header = experiencias_header_default;
     experiencias = experiencias_default;
 }
 

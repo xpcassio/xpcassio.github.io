@@ -1,25 +1,21 @@
 ---
-const year = new Date().getFullYear();
+import { footer_default, footer_en } from "@datas/footer.astro";
 
 // Internacionalization
-let text,print;
+let footer;
 const currentLocale = Astro.currentLocale;
-if (currentLocale === 'en') {
-	text = 'Developed with ❤️ by';
-	print = 'Generated dynamically for printing. For more information, please contact via email at xpcassio@duck.com and for a better view, visit xpcassio.com. Thank you very much!';
-}
-else {
-	text = 'Desenvolvido com ❤️ por';
-	print = 'Gerado dinamicamente para impressão. Para mais informações entre em contato pelo email xpcassio@duck.com e para uma melhor visualização acesse xpcassio.com. Muito obrigado!';
-}
+if (currentLocale === 'en')
+	footer = footer_en;
+else
+	footer = footer_default;
 ---
 
-<footer class="mt-4 mt-lg-5 mb-3">
+<footer class="mt-auto py-3 footer">
 	<div class="container d-print-none">
-		<p class="mb-0">{text} <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a></p>
+		<p class="mb-0"><Fragment set:html={footer.screen} /></p>
 	</div>
 
 	<div class="container d-none d-print-flex">
-		<p>{print}</p>
+		<p><Fragment set:html={footer.print} /></p>
 	</div>
 </footer>

@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import { stack, stack_header_default, stack_header_en } from "@datas/StacksOthers.astro";
+import { stack, stack_header_default, stack_header_en } from '@datas/stacks.astro';
 
 // Internacionalization
 let header;
 const currentLocale = Astro.currentLocale;
 if (currentLocale === 'en')
-	header = stack_header_default;
-else
 	header = stack_header_en;
+else
+	header = stack_header_default;
 ---
 <div class="col-12 col-lg-10 offset-lg-1 mt-5">
     <div class="new-header">

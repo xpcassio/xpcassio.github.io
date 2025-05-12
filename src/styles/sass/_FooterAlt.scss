@@ -1,6 +1,8 @@
+@use 'sass:color';
+
 footer.footer {
 	text-align: center;
-	background-color: lighten($new_preto, 5%);
+	background-color: color.adjust(#262626, $lightness: 5%);
 	color: white;
 
 	p {
