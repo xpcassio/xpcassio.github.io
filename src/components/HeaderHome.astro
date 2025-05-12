@@ -1,35 +1,37 @@
 ---
 import { Image } from 'astro:assets';
-import imgAvatar from '../../public/icon.webp';
-import Icon from '../components/Icon.astro';
+import avatar from '@images/icon.webp';
+import SvgEnvelopeSquare from '@images/svg/envelope-square.svg';
+import SvgGithubSquare from '@images/svg/github-square.svg';
+import SvgLinkedIn from '@images/svg/linkedin.svg';
 
-// lang
+// Internacionalization
 let linkedUrl;
-if (Astro.url.pathname == '/en')
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en')
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/?locale=en_US';
 else
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/';
 ---
-
 <div class="jumbotron jumbotron-one rounded-0 d-print-none">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-4 text-center">
-				<Image src={imgAvatar} class="rounded-circle img-thumbnail" alt="" loading="lazy" />
+				<Image src={avatar} class="rounded-circle img-thumbnail" alt="Thumbnail" loading="eager" />
 			</div>
 			<div class="col-12 col-sm-8 text-center">
 				<h1 class="nome-geral mt-3 mt-sm-0 mt-lg-4 mb-0">Cássio Nascimento</h1>
 				<hr class="style-hr bg-white"/>
 
-				<a href="mailto:xpcassio@duck.com" class="social-mail d-inline-block mt-1">
-					<Icon icon="envelope-square" />
-				</a>
-				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1">
-					<Icon icon="github-square" />
-				</a>
-				<a href={linkedUrl} target="_tab" class="social-linkedin social-active d-inline-block mt-1">
-					<Icon icon="linkedin" />
+				<a href="mailto:xpcassio@duck.com" class="social-mail social-active d-inline-block mt-1" aria-label="Email">
+					<SvgEnvelopeSquare />
 					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
+				</a>
+				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1" aria-label="Github">
+					<SvgGithubSquare />
+				</a>
+				<a href={linkedUrl} target="_tab" class="social-linkedin d-inline-block mt-1" aria-label="LinkedIn">
+					<SvgLinkedIn />
 				</a>
 			</div>
 		</div>
@@ -53,7 +55,7 @@ else
 					<strong>Github:</strong> github.com/xpcassio
 				</h4>
 				<h4>
-					<strong>LinkedIn:</strong> https://www.linkedin.com/in/xpcassio
+					<strong>LinkedIn:</strong> {linkedUrl}
 				</h4>
 			</div>
 		</div>

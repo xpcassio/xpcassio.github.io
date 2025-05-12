@@ -1,13 +1,25 @@
 ---
 const year = new Date().getFullYear();
+
+// Internacionalization
+let text,print;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+	text = 'Developed with ❤️ by';
+	print = 'Generated dynamically for printing. For more information, please contact via email at xpcassio@duck.com and for a better view, visit xpcassio.com. Thank you very much!';
+}
+else {
+	text = 'Desenvolvido com ❤️ por';
+	print = 'Gerado dinamicamente para impressão. Para mais informações entre em contato pelo email xpcassio@duck.com e para uma melhor visualização acesse xpcassio.com. Muito obrigado!';
+}
 ---
 
 <footer class="mt-4 mt-lg-5 mb-3">
 	<div class="container d-print-none">
-		<p class="mb-0">Desenvolvido com ❤️ por <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a></p>
+		<p class="mb-0">{text} <a class="text-muted" href="mailto:xpcassio@gmail.com" target="_top">xpcassio</a></p>
 	</div>
 
 	<div class="container d-none d-print-flex">
-		<p>Gerado dinamicamente para impressão. Para mais informações entre em contato pelo email <strong>xpcassio@duck.com</strong> e para uma melhor visualização acesse <strong>xpcassio.com</strong>. Muito obrigado!</p>
+		<p>{print}</p>
 	</div>
 </footer>

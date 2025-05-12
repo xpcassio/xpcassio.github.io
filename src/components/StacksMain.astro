@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import { stack_main, stack_main_header_default, stack_main_header_en } from "@datas/stacksMain.astro";
+
+// Internacionalization
+let header;
+const stacks = stack_main;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en')
+	header = stack_main_header_default;
+else
+	header = stack_main_header_en;
+---
+<div class="col-12 col-lg-10 offset-lg-1 mt-5">
+    <div class="new-header">
+        <hr class="d-print-none"/>
+        <h3>{header}</h3>
+    </div>
+
+    {stacks.map((con) =>
+        <Image src={con.shield} class="mb-2 mr-2" alt={con.name} inferSize={true} loading="eager" />
+    )}
+</div>

@@ -1,0 +1,35 @@
+---
+import Footer from '@components/Footer.astro';
+import HeaderHome from '@components/HeaderHome.astro';
+import MenuHome from '@components/MenuHome.astro';
+
+// CSS
+import '@styles/bootstrap.min.css';
+import '@styles/sass/style.scss';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { currentLocale } = Astro;
+---
+<!DOCTYPE html>
+<html class="h-100" lang={currentLocale}>
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>{title}</title>
+</head>
+<body>
+	<HeaderHome />
+	<MenuHome />
+	<slot />
+	<Footer />
+
+	<!-- JS -->
+	<script is:inline src="/js/jquery-3.6.1.slim.min.js"></script>
+	<script is:inline src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
