@@ -1,4 +1,5 @@
 ---
+import Footer from '@components/Footer.astro';
 import HeaderHome from '@components/HeaderHome.astro';
 import MenuHome from '@components/MenuHome.astro';
 
@@ -25,6 +26,7 @@ const { currentLocale } = Astro;
 	<HeaderHome />
 	<MenuHome />
 	<slot />
+	<Footer />
 
 	<!-- JS -->
 	<script is:inline src="/js/jquery-3.6.1.slim.min.js"></script>

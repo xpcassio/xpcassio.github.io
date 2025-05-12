@@ -17,20 +17,20 @@ else
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-4 text-center">
-				<Image src={avatar} class="rounded-circle img-thumbnail" alt="" />
+				<Image src={avatar} class="rounded-circle img-thumbnail" alt="Thumbnail" loading="eager" />
 			</div>
 			<div class="col-12 col-sm-8 text-center">
 				<h1 class="nome-geral mt-3 mt-sm-0 mt-lg-4 mb-0">Cássio Nascimento</h1>
 				<hr class="style-hr bg-white"/>
 
-				<a href="mailto:xpcassio@duck.com" class="social-mail social-active d-inline-block mt-1">
+				<a href="mailto:xpcassio@duck.com" class="social-mail social-active d-inline-block mt-1" aria-label="Email">
 					<SvgEnvelopeSquare />
 					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
 				</a>
-				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1">
+				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1" aria-label="Github">
 					<SvgGithubSquare />
 				</a>
-				<a href={linkedUrl} target="_tab" class="social-linkedin d-inline-block mt-1">
+				<a href={linkedUrl} target="_tab" class="social-linkedin d-inline-block mt-1" aria-label="LinkedIn">
 					<SvgLinkedIn />
 				</a>
 			</div>
