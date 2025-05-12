@@ -1,0 +1,37 @@
+---
+import { experiencias_header_default, experiencias_en, experiencias_header_en, experiencias_default } from "@datas/experiencias.astro";
+
+// Internacionalization
+let header,experiencias;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+    header = experiencias_header_default;
+    experiencias = experiencias_en;
+}
+else {
+    header = experiencias_header_en;
+    experiencias = experiencias_default;
+}
+
+// Functions
+function isLast(item: number) {
+	return (experiencias.length == item + 1) ? true : false;
+}
+---
+<div class="col-12 col-lg-10 offset-lg-1 mt-5">
+    <div class="new-header clearfix">
+        <hr class="d-print-none"/>
+        <h3>{header}</h3>
+    </div>
+
+    {experiencias.map((exp, i) =>
+        <dl class:list={["row", {'mb-0': isLast(i)}]}>
+            <dt class="col-12 col-sm-3 col-lg-2">{exp.ano}</dt>
+            <dd class="col-12 col-sm-9 col-lg-10 mb-0">
+                <strong class="clearfix">{exp.empresa}</strong>
+                <small class="text-muted">{exp.funcao}</small>
+                <p class="mb-0 mt-2">{exp.descricao}</p>
+            </dd>
+        </dl>
+    )}
+</div>

@@ -1,26 +1,10 @@
 /* ============================================= 
    COMPONENTS 
    ============================================= */
-@use 'header';
-@use 'menu';
-@use 'footer';
+@use 'HeaderHome';
+@use 'MenuHome';
+@use 'Footer';
+@use 'AboutMe';
+@use 'Educacao';
 
 @import url("https://fonts.googleapis.com/css?family=Archivo+Black&display=swap");
-
-// body.body-alt p {
-// 	font-size: .9rem;
-// }
-
-/* ============================================= 
-   PAGES 
-   ============================================= */   
-// @import 'index';
-// @import 'alternativo';
-// @import 'post';
-// @import 'projetos';
-
-/* ============================================= 
-   LAYOUT 
-   ============================================= */
-// @import 'header_alt';
-// @import 'footer_alt';

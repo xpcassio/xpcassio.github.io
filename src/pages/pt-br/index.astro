@@ -1,6 +1,21 @@
 ---
+import AboutMe from '@components/AboutMe.astro';
+import Cursos from '@components/Cursos.astro';
+import Educacao from '@components/Educacao.astro';
+import Experiencias from '@components/Experiencias.astro';
+import StacksMain from '@components/StacksMain.astro';
+import StacksOthers from '@components/StacksOthers.astro';
 import HomeLayout from '@layouts/home.astro';
 ---
-<HomeLayout title="Home Page - pt-br">
-  <p>My page content, wrapped in a layout!</p>
+<HomeLayout title="xpcassio - Inicial">
+  <div class="container">
+		<div class="row">
+      <AboutMe />
+      <StacksMain />
+      <StacksOthers />
+      <Experiencias />
+      <Cursos />
+      <Educacao />
+    </div>
+  </div>
 </HomeLayout>
