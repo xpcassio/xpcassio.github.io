@@ -8,14 +8,18 @@ import SvgGithubSquare from '@images/svg/github-square.svg';
 import SvgLinkedIn from '@images/svg/linkedin.svg';
 
 // Internacionalization
-let linkedUrl;
+let linkedUrl,titulo;
 const currentLocale = Astro.currentLocale;
-if (currentLocale === 'en')
+if (currentLocale === 'en') {
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/?locale=en_US';
-else
+	titulo = 'FullStack Developer';
+}
+else {
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/';
+	titulo = 'Desenvolvedor FullStack';
+}
 ---
-<div class="jumbotron jumbotron-one rounded-0 d-print-none">
+<header class="jumbotron jumbotron-one rounded-0 d-print-none">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-4 text-center">
@@ -38,7 +42,7 @@ else
 			</div>
 		</div>
 	</div>
-</div>
+</header>
 
 <!-- PRINTING -->
 <div class="d-none d-print-flex mb-5">
@@ -46,9 +50,9 @@ else
 		<div class="row">
 			<div class="col-12">
 				<h1 style="margin-bottom: 0px"><strong>Cássio Nascimento</strong></h1>
-				<h3 style="margin-top: 0px; color:slategrey; margin-bottom: 30px;"><small>Desenvolvedor Fullstack</small></h3>
+				<h3 style="margin-top: 0px; color:slategrey; margin-bottom: 30px;"><small>{titulo}</small></h3>
 				<h4>
-					<strong>Site:</strong> xpcassio.com
+					<strong>Website:</strong> xpcassio.com
 				</h4>
 				<h4>
 					<strong>Email:</strong> xpcassio@duck.com

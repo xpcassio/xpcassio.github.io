@@ -35,6 +35,7 @@ function isLast(item: number) {
                     <dd class="mb-0">
                         <strong class="clearfix">{cur.nome}</strong>
                         <small class="text-muted clearfix">{cur.onde}</small>
+                        <span class="d-print-flex d-none">{cur.print}</span>
                         <Fragment set:html={cur.status}></Fragment>
                     </dd>
                 </dl>

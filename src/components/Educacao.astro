@@ -1,14 +1,26 @@
 ---
 import Idiomas from "./Idiomas.astro";
+import { educacao_default, educacao_en, educacao_header_default, educacao_header_en } from "@datas/educacao.astro";
 
 // Internacionalization
-let header;
+let header,educacao;
 const currentLocale = Astro.currentLocale;
 if (currentLocale === 'en') {
-    header = "Education";
+    header = educacao_header_en;
+    educacao = educacao_en;
 }
 else {
-    header =  "Educação";
+    header = educacao_header_default;
+    educacao = educacao_default;
+}
+
+// Functions
+function getClassCur(item: number) {
+	return (educacao.length != item + 1) ? true : false;
+}
+
+function isLast(item: number) {
+	return (educacao.length == item + 1) ? true : false;
 }
 ---
 <div class="col-12 col-lg-10 offset-lg-1">
@@ -19,24 +31,18 @@ else {
                 <h3>{header}</h3>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 mb-3">
-                    <strong class="clearfix">Desenvolvimento Web e Mobile</strong>
-                    <small class="text-muted clearfix">IFsulMG • Instituto Dederal de Educação, Ciência e Tecnologia do Sudeste de MG</small>
-                    <small class="clearfix">Pós-Graduação</small>
-                    <span class="badge badge-secondary w-50">Em andamento</span>
-                </div>
-                <div class="col-12 col-md-6 mb-3">
-                    <strong class="clearfix">Especialização web management</strong>
-                    <small class="text-muted clearfix">IESAM • Instituto de Ensino Superiores da Amazônia</small>
-                    <small class="clearfix">Pós-Graduação</small>
-                    <span class="badge badge-success w-50">Concluido</span>
-                </div>
-                <div class="col-12 col-md-6 mb-0">
-                    <strong class="clearfix">Bacharel em Ciência da computação</strong>
-                    <small class="text-muted clearfix">CESUPA • Centro Universitário do Estado do Pará</small>
-                    <small class="clearfix text-bold">Graduação</small>
-                    <span class="badge badge-success w-50">Concluido</span>
-                </div>
+                {educacao.map((cur, i) =>
+                    <div class="col-12 col-md-6">
+                        <dl class:list={[{'mb-3': getClassCur(i), 'mb-0': isLast(i)}]}>
+                            <dd class="mb-0">
+                                <strong class="clearfix">{cur.nome}</strong>
+                                <small class="text-muted clearfix">{cur.onde}</small>
+                                <span class="d-print-flex d-none">{cur.print}</span>
+                                <Fragment set:html={cur.status}></Fragment>
+                            </dd>
+                        </dl>
+                    </div>
+                )}
             </div>
         </div>
 
