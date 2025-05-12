@@ -1,5 +1,5 @@
 .jumbotron-one {
-	background-color: $new_preto;
+	background-color: #262626;
 	color: white;
 	margin-bottom: 0;
 	padding: 3rem 2rem;
@@ -30,21 +30,21 @@
 		}
 	}
 
-	.social-mail:focus,.social-mail:hover,.social-mail.social-active {
+	.social-mail:focus,.social-mail:hover {
 		svg {
-			fill: $vermelho_email;
+			fill: #EA4335;
 		}
 	}
 
-	.social-linkedin:focus,.social-linkedin:hover,.social-linkedin.social-active {
+	.social-linkedin:focus,.social-linkedin:hover {
 		svg {
-			fill: $azul_linkdin;
+			fill: #007bb6;
 		}
 	}
 
-	.social-github:focus,.social-github:hover,.social-github.social-active {
+	.social-github:focus,.social-github:hover {
 		svg {
-			fill: $cinza_github;
+			fill: #cdd9e5;
 		}
 	}
 }
@@ -62,6 +62,24 @@
 
 	.nome-geral {
 		font-size: 50px;
+	}
+
+	.social-mail.social-active {
+		svg {
+			fill: #EA4335;
+		}
+	}
+
+	.social-linkedin.social-active {
+		svg {
+			fill: #007bb6;
+		}
+	}
+
+	.social-github.social-active {
+		svg {
+			fill: #cdd9e5;
+		}
 	}
 }
 

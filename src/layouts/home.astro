@@ -4,8 +4,7 @@ import MenuHome from '@components/MenuHome.astro';
 
 // CSS
 import '@styles/bootstrap.min.css';
-import '@styles/global.min.css';
-// import '@styles/sass/style.scss'; PROVAVELMENTE NÃO FUNCIONA
+import '@styles/sass/style.scss';
 
 interface Props {
   title: string;
@@ -26,5 +25,9 @@ const { currentLocale } = Astro;
 	<HeaderHome />
 	<MenuHome />
 	<slot />
+
+	<!-- JS -->
+	<script is:inline src="/js/jquery-3.6.1.slim.min.js"></script>
+	<script is:inline src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
