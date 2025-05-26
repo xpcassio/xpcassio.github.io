@@ -30,7 +30,10 @@ function isLast(item: number) {
             <dd class="col-12 col-sm-9 col-lg-10 mb-0">
                 <strong class="clearfix">{exp.empresa}</strong>
                 <small class="text-muted">{exp.funcao}</small>
-                <p class="mb-0 mt-2"><Fragment set:html={exp.descricao}></Fragment></p>
+                <p class="mt-2 mb-1"><Fragment set:html={exp.descricao}></Fragment></p>
+                { exp.stacks.length > 0 && (
+                    <p class="mb-0 text-muted"><b>Stacks:</b> {exp.stacks.join(', ')}</p>
+                )}
             </dd>
         </dl>
     )}
