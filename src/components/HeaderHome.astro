@@ -10,6 +10,7 @@ import SvgLinkedIn from '@images/svg/linkedin.svg';
 // Internacionalization
 let linkedUrl,titulo,localizacao;
 const currentLocale = Astro.currentLocale;
+const mainEmail = 'xpcassio@gmail.com';
 if (currentLocale === 'en') {
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/?locale=en_US';
 	titulo = 'FullStack Developer';
@@ -31,9 +32,9 @@ else {
 				<h1 class="nome-geral mt-3 mt-sm-0 mt-lg-4 mb-0">Cássio Nascimento</h1>
 				<hr class="style-hr bg-white"/>
 
-				<a href="mailto:xpcassio@duck.com" class="social-mail social-active d-inline-block mt-1" aria-label="Email">
+				<a href="mailto:xpcassio@gmail.com" class="social-mail social-active d-inline-block mt-1" aria-label="Email">
 					<SvgEnvelopeSquare />
-					<span class="d-none d-sm-inline">xpcassio@duck.com</span>
+					<span class="d-none d-sm-inline">{mainEmail}</span>
 				</a>
 				<a href="https://github.com/xpcassio" target="_tab" class="social-github d-inline-block mt-1" aria-label="Github">
 					<SvgGithubSquare />
@@ -54,19 +55,19 @@ else {
 				<h1 style="margin-bottom: 0px"><strong>Cássio Nascimento</strong></h1>
 				<h3 style="margin-top: 0px; color:slategrey; margin-bottom: 30px;"><small>{titulo}</small></h3>
 				<h4>
-					<strong>Website:</strong> xpcassio.com
-				</h4>
-				<h4>
-					<strong>Email:</strong> xpcassio@duck.com
-				</h4>
-				<h4>
-					<strong>Github:</strong> github.com/xpcassio
+					<strong>Email:</strong> {mainEmail}
 				</h4>
 				<h4>
 					<strong>LinkedIn:</strong> {linkedUrl}
 				</h4>
 				<h4>
+					<strong>Github:</strong> github.com/xpcassio
+				</h4>
+				<h4>
 					<strong>Location:</strong> {localizacao}
+				</h4>
+				<h4>
+					<strong>Website:</strong> xpcassio.com
 				</h4>
 			</div>
 		</div>

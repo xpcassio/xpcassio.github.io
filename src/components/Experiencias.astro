@@ -26,13 +26,13 @@ function isLast(item: number) {
 
     {experiencias.map((exp, i) =>
         <dl class:list={["row", {'mb-0': isLast(i)}]}>
-            <dt class="col-12 col-sm-3 col-lg-2">{exp.ano}</dt>
-            <dd class="col-12 col-sm-9 col-lg-10 mb-0">
+            <dt class="col-12 col-sm-3">{exp.ano}</dt>
+            <dd class="col-12 col-sm-9 mb-0">
                 <strong class="clearfix">{exp.empresa}</strong>
                 <small class="text-muted">{exp.funcao}</small>
                 <p class="mt-2 mb-1"><Fragment set:html={exp.descricao}></Fragment></p>
                 { exp.stacks.length > 0 && (
-                    <p class="mb-0 text-muted"><b>Stacks:</b> {exp.stacks.join(', ')}</p>
+                    <p class="mb-0 text-muted"><b>Competências:</b> {exp.stacks.join(', ')}</p>
                 )}
             </dd>
         </dl>

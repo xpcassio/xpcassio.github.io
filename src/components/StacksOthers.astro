@@ -16,7 +16,8 @@ else
         <h3>{header}</h3>
     </div>
 
-    {stack.map((con) =>
-        <Image src={con.shield} class="mb-2 mr-2" alt={con.name} inferSize={true} loading="eager" />
+    {stack.map((con, index) =>
+        <Image src={con.shield} class="mb-2 mr-2 d-print-none" alt={con.name} inferSize={true} loading="eager" />
+        <span class="d-none d-print-inline">{con.name}{index < stack.length - 1 ? ", " : ""}</span>
     )}
 </div>
