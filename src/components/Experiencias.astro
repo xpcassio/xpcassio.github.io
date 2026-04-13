@@ -31,8 +31,8 @@ function isLast(item: number) {
                 <strong class="clearfix">{exp.empresa}</strong>
                 <small class="text-muted">{exp.funcao} - {exp.cargo}</small>
                 <p class="mt-2 mb-1"><Fragment set:html={exp.descricao}></Fragment></p>
-                { exp.stacks.length > 0 && (
-                    <p class="mb-0 text-muted"><b>Competências:</b> {exp.stacks.join(', ')}</p>
+                { exp.competencias.length > 0 && (
+                    <p class="mb-0 text-muted"><b>Competências:</b> {exp.competencias.join(', ')}</p>
                 )}
             </dd>
         </dl>
