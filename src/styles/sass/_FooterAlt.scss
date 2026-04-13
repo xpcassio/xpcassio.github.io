@@ -18,3 +18,13 @@ footer.footer {
 		}
 	}
 }
+
+/* ============================================= 
+   PRINT
+   ============================================= */
+@media print {
+	footer.footer {
+		background-color: transparent;
+		color: #6c757d;
+	}
+}

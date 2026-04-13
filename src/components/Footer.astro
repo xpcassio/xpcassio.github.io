@@ -16,6 +16,10 @@ else
 	</div>
 
 	<div class="container d-none d-print-flex">
-		<p><Fragment set:html={footer.print} /></p>
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
+				<p><Fragment set:html={footer.print} /></p>
+			</div>
+		</div>
 	</div>
 </footer>

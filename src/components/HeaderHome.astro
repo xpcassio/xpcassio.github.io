@@ -8,18 +8,22 @@ import SvgGithubSquare from '@images/svg/github-square.svg';
 import SvgLinkedIn from '@images/svg/linkedin.svg';
 
 // Internacionalization
-let linkedUrl,titulo,localizacao;
+let linkedUrl,titulo,localizacao,lang, cellphone;
 const currentLocale = Astro.currentLocale;
 const mainEmail = 'xpcassio@gmail.com';
 if (currentLocale === 'en') {
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/?locale=en_US';
-	titulo = 'FullStack Developer';
+	titulo = 'FrontEnd Developer';
 	localizacao = 'Brazil';
+	lang = "English - Portuguese";
+	cellphone = '+55 91 98833-2043';
 }
 else {
 	linkedUrl = 'https://www.linkedin.com/in/xpcassio/';
-	titulo = 'Desenvolvedor FullStack';
-	localizacao = 'Belém/Pará - Brasil';
+	titulo = 'Desenvolvedor FrontEnd';
+	localizacao = 'Belém - Pará - Brasil';
+	lang = "Português - Inglês";
+	cellphone = '(91) 98833-2043';
 }
 ---
 <header class="jumbotron jumbotron-one rounded-0 d-print-none">
@@ -51,8 +55,8 @@ else {
 <div class="d-none d-print-flex mb-5">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-				<h1 style="margin-bottom: 0px"><strong>Cássio Nascimento</strong></h1>
+			<div class="col-12 col-lg-10 offset-lg-1">
+				<h1 style="margin-bottom: 0px"><strong>Cássio Gomes do Nascimento</strong></h1>
 				<h3 style="margin-top: 0px; color:slategrey; margin-bottom: 30px;"><small>{titulo}</small></h3>
 				<h4>
 					<strong>Email:</strong> {mainEmail}
@@ -68,6 +72,12 @@ else {
 				</h4>
 				<h4>
 					<strong>Website:</strong> xpcassio.com
+				</h4>
+				<!-- <h4>
+					<strong>Languages:</strong> {lang}
+				</h4> -->
+				<h4>
+					<strong>Cellphone:</strong> {cellphone}
 				</h4>
 			</div>
 		</div>
