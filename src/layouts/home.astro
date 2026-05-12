@@ -1,5 +1,7 @@
 ---
+import Favicon from '@components/Favicon.astro';
 import Footer from '@components/Footer.astro';
+import HeaderGestao from '@components/HeaderGestao.astro';
 import HeaderHome from '@components/HeaderHome.astro';
 import MenuHome from '@components/MenuHome.astro';
 
@@ -12,7 +14,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const { currentLocale } = Astro;
+const { currentLocale, url } = Astro;
 ---
 <!DOCTYPE html>
 <html class="h-100" lang={currentLocale}>
@@ -20,10 +22,19 @@ const { currentLocale } = Astro;
 	<!-- META -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SEO -->
+	<Favicon />
+
+	<!-- OUTROS -->
 	<title>{title}</title>
 </head>
 <body class="body-alt">
-	<HeaderHome />
+	{url.pathname?.includes('gestao') ? (
+		<HeaderGestao />
+	) : (
+		<HeaderHome />
+	)}
 	<MenuHome />
 	<slot />
 	<Footer />

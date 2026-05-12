@@ -1,0 +1,21 @@
+---
+import AboutMeGestao from '@components/AboutMeGestao.astro';
+import Cursos from '@components/Cursos.astro';
+import Educacao from '@components/Educacao.astro';
+import ExperienciasGestao from '@components/ExperienciasGestao.astro';
+import Idiomas from '@components/Idiomas.astro';
+import StacksGestao from '@components/StacksGestao.astro';
+import HomeLayout from '@layouts/home.astro';
+---
+<HomeLayout title="xpcassio - Inicial">
+  <div class="container">
+	<div class="row">
+      <AboutMeGestao/>
+      <StacksGestao />
+      <ExperienciasGestao />
+      <Cursos />
+      <Idiomas />
+      <Educacao />
+    </div>
+  </div>
+</HomeLayout>
