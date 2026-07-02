@@ -1,0 +1,24 @@
+---
+import AboutMeAssisAdm from '@components/AboutMeAssisAdm.astro';
+import Cursos from '@components/Cursos.astro';
+import Educacao from '@components/Educacao.astro';
+import ExperienciasAssisAdm from '@components/ExperienciasAssisAdm.astro';
+import Idiomas from '@components/Idiomas.astro';
+import StacksAssisAdm from '@components/StacksAssisAdm.astro';
+import StacksAssisAdmTec from '@components/StacksAssisAdmTec.astro';
+import HomeLayout from '@layouts/home.astro';
+---
+<HomeLayout title="xpcassio - Inicial">
+  <div class="container">
+	<div class="row">
+      <AboutMeAssisAdm/>
+      <StacksAssisAdm />
+      <StacksAssisAdmTec />
+      <!-- 
+      <ExperienciasAssisAdm />
+      <Cursos />
+      <Idiomas />
+      <Educacao /> -->
+    </div>
+  </div>
+</HomeLayout>

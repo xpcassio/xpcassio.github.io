@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import { competencias_assis_adm_header_default, competencias_assis_adm_header_en, competencias_assis_adm } from "@datas/competenciasAssisAdm.astro";
+
+// Internacionalization
+let header;
+const competencias = competencias_assis_adm;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en')
+	header = competencias_assis_adm_header_en;
+else
+	header = competencias_assis_adm_header_default;
+---
+<div class="col-12 col-lg-10 offset-lg-1 mt-5">
+    <div class="new-header">
+        <hr class="d-print-none"/>
+        <h3>{header}</h3>
+    </div>
+
+    {competencias.map((con, index) =>
+        <Image src={`https://img.shields.io/badge/-blue?style=for-the-badge&label=`+con.name} class="mb-2 mr-2 d-print-none" alt={con.desc} inferSize={true} loading="eager" />
+        <span class="d-none d-print-inline">{con.name}{index < competencias.length - 1 ? ", " : ""}</span>
+    )}
+</div>
