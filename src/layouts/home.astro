@@ -1,6 +1,7 @@
 ---
 import Favicon from '@components/Favicon.astro';
 import Footer from '@components/Footer.astro';
+import HeaderAssisAdm from '@components/HeaderAssisAdm.astro';
 import HeaderGestao from '@components/HeaderGestao.astro';
 import HeaderHome from '@components/HeaderHome.astro';
 import MenuHome from '@components/MenuHome.astro';
@@ -32,6 +33,8 @@ const { currentLocale, url } = Astro;
 <body class="body-alt">
 	{url.pathname?.includes('gestao') ? (
 		<HeaderGestao />
+	) : url.pathname?.includes('adm') ? (
+		<HeaderAssisAdm />
 	) : (
 		<HeaderHome />
 	)}

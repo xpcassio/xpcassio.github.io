@@ -1,0 +1,45 @@
+---
+import { cursos_header_default, cursos_en, cursos_header_en, cursos_default } from "@datas/cursosAssisAdm.astro";
+
+// Internacionalization
+let header,cursos;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+    header = cursos_header_en;
+    cursos = cursos_en;
+}
+else {
+    header = cursos_header_default;
+    cursos = cursos_default;
+}
+
+// Functions
+function getClassCur(item: number) {
+	return (cursos.length != item + 1) ? true : false;
+}
+
+function isLast(item: number) {
+	return (cursos.length == item + 1) ? true : false;
+}
+---
+<div class="col-12 col-lg-4 offset-lg-1 my-5">
+    <div class="new-header clearfix">
+        <hr class="d-print-none"/>
+        <h3>{header}</h3>
+    </div>
+
+    <div class="row">
+        {cursos.map((cur, i) =>
+            <div class="col-12 col-md-6 col-lg-12">
+                <dl class:list={[{'mb-3': getClassCur(i), 'mb-0': isLast(i)}]}>
+                    <dd class="mb-0">
+                        <strong class="clearfix">{cur.nome}</strong>
+                        <small class="text-muted clearfix">{cur.onde}</small>
+                        <span class="d-print-flex d-none">{cur.print}</span>
+                        <Fragment set:html={cur.status}></Fragment>
+                    </dd>
+                </dl>
+            </div>
+        )}
+    </div>
+</div>

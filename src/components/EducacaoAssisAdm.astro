@@ -1,0 +1,46 @@
+---
+import { educacao_default, educacao_en, educacao_header_default, educacao_header_en } from "@datas/educacaoAssisAdm.astro";
+
+// Internacionalization
+let header,educacao;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+    header = educacao_header_en;
+    educacao = educacao_en;
+}
+else {
+    header = educacao_header_default;
+    educacao = educacao_default;
+}
+
+// Functions
+function getClassCur(item: number) {
+	return (educacao.length != item + 1) ? true : false;
+}
+
+function isLast(item: number) {
+	return (educacao.length == item + 1) ? true : false;
+}
+---
+<div class="row">
+    <div class="col-12 my-3 my-md-5">
+        <div class="new-header">
+            <hr class="d-print-none"/>
+            <h3>{header}</h3>
+        </div>
+        <div class="row">
+            {educacao.map((cur, i) =>
+                <div class="col-12">
+                    <dl class:list={[{'mb-3': getClassCur(i), 'mb-0': isLast(i)}]}>
+                        <dd class="mb-0">
+                            <strong class="clearfix">{cur.nome}</strong>
+                            <small class="text-muted clearfix">{cur.onde}</small>
+                            <span class="d-print-flex d-none">{cur.print}</span>
+                            <Fragment set:html={cur.status}></Fragment>
+                        </dd>
+                    </dl>
+                </div>
+            )}
+        </div>
+    </div>
+</div>

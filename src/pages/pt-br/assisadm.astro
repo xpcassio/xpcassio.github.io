@@ -1,9 +1,8 @@
 ---
 import AboutMeAssisAdm from '@components/AboutMeAssisAdm.astro';
-import Cursos from '@components/Cursos.astro';
-import Educacao from '@components/Educacao.astro';
-import ExperienciasAssisAdm from '@components/ExperienciasAssisAdm.astro';
-import Idiomas from '@components/Idiomas.astro';
+import CursoAssisAdm  from '@components/CursosAssisAdm.astro';
+import EducacaoAssisAdm  from '@components/EducacaoAssisAdm.astro';
+import IdiomasAssisAdm  from '@components/IdiomasAssisAdm.astro';
 import StacksAssisAdm from '@components/StacksAssisAdm.astro';
 import StacksAssisAdmTec from '@components/StacksAssisAdmTec.astro';
 import HomeLayout from '@layouts/home.astro';
@@ -14,11 +13,15 @@ import HomeLayout from '@layouts/home.astro';
       <AboutMeAssisAdm/>
       <StacksAssisAdm />
       <StacksAssisAdmTec />
-      <!-- 
-      <ExperienciasAssisAdm />
-      <Cursos />
-      <Idiomas />
-      <Educacao /> -->
+      <div class="col-12">
+        <div class="row">
+          <CursoAssisAdm />
+          <div class="col-12 col-lg-6">
+            <EducacaoAssisAdm />
+            <IdiomasAssisAdm />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </HomeLayout>

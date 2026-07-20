@@ -1,0 +1,31 @@
+---
+// Internacionalization
+let header,title;
+const currentLocale = Astro.currentLocale;
+if (currentLocale === 'en') {
+    header = "Idioms";
+    title = "English – Advanced / Fluent (reading, writing, and speaking)";
+}
+else {
+    header =  "Idiomas";
+    title = "Inglês – Avançado / Fluente (leitura, escrita e conversação)";
+}
+---
+<div class="row">
+    <div class="col-12 my-5 my-md-3">
+        <div class="new-header">
+            <hr class="d-print-none"/>
+            <h3>{header}</h3>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <strong class="clearfix">{title}</strong>
+                <small class="text-muted clearfix">ILAC • International Language Academy of Canada</small>
+            </div>
+            <div class="col-12 mb-0">
+                <strong class="clearfix">{title}</strong>
+                <small class="text-muted clearfix">Voxy Proficiency Achievement Certificate</small>
+            </div>
+        </div>
+    </div>
+</div>
